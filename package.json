@@ -1,0 +1,54 @@
+{
+  "name": "indicia-wp-theme-base",
+  "version": "2.0.0",
+  "contributors": [
+    "Stijn Bastiaansen <stijn.bastiaansen@indicia.nl>",
+    "Remy van Velthuijsen <remy.van.velthuijsen@indicia.nl>"
+  ],
+  "homepage": "https://www.indicia.nl/interactiv",
+  "private": true,
+  "browserslist": [
+    "> 5%",
+    "ie 11",
+    "not dead"
+  ],
+  "licenses": [
+    {
+      "type": "GPL-3.0+",
+      "url": "https://opensource.org/licenses/GPL-3.0"
+    }
+  ],
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "2.0.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.1",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.1.5",
+    "laravel-mix": "^4.0",
+    "minimist": "^1.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "foundation-sites": "6.6.1",
+    "gsap": "^3.2.4",
+    "intersection-observer": "^0.7.0",
+    "scrollama": "^2.2.0",
+    "what-input": "^5.2.3"
+  }
+}

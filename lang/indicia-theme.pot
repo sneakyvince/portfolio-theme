@@ -1,0 +1,112 @@
+# Copyright (C) 2020 Indicia Interactiv
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: Indicia Interactiv Starter Theme 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/indicia_theme_update\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-20T11:20:25+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.2.0\n"
+"X-Domain: indicia-theme\n"
+
+#. Theme Name of the theme
+msgid "Indicia Interactiv Starter Theme"
+msgstr ""
+
+#. Description of the theme
+msgid "The base theme on which Indicia Interactiv builds its WordPress themes"
+msgstr ""
+
+#. Author of the theme
+msgid "Indicia Interactiv"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.indicia-interactiv.nl"
+msgstr ""
+
+#: 404.php:4
+msgid "Sorry, de pagina die je probeert te bezoeken bestaat niet."
+msgstr ""
+
+#: base.php:15
+msgid "U gebruikt een <strong>verouderde</strong> browser. We raden u aan om <a href=\"http://browsehappy.com/\">een nieuwe versie te gebruiken</a> om te profiteren van alle mogelijkheden op de website."
+msgstr ""
+
+#: functions.php:22
+msgid "Fout bij lokaliseren %s voor opname"
+msgstr ""
+
+#: index.php:5
+#: search.php:5
+msgid "Sorry, geen resultaten gevonden."
+msgstr ""
+
+#: lib/Acf/HeadingField.php:20
+msgid "Titel niveau"
+msgstr ""
+
+#: lib/Acf/HeadingField.php:37
+msgid "Titel"
+msgstr ""
+
+#: lib/extras.php:41
+msgid "Vervolgd"
+msgstr ""
+
+#: lib/setup.php:23
+msgid "Hoofd Navigatie"
+msgstr ""
+
+#: lib/setup.php:60
+msgid "Primaire"
+msgstr ""
+
+#: lib/setup.php:69
+msgid "Footer"
+msgstr ""
+
+#: lib/titles.php:13
+msgid "Laatste berichten"
+msgstr ""
+
+#: lib/titles.php:18
+msgid "Zoekresultaten voor %s"
+msgstr ""
+
+#: lib/titles.php:20
+msgid "Niet gevonden"
+msgstr ""
+
+#: templates/comments.php:9
+msgctxt "reactie titel"
+msgid "Eén reactie op &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s reacties op &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments.php:19
+msgid "&larr; Oudere reacties"
+msgstr ""
+
+#: templates/comments.php:22
+msgid "Nieuwere reacties &rarr;"
+msgstr ""
+
+#: templates/comments.php:31
+msgid "Reageren is niet mogelijk."
+msgstr ""
+
+#: templates/content-page.php:2
+#: templates/content-single.php:12
+msgid "Pagina's:"
+msgstr ""
+
+#: templates/entry-meta.php:2
+msgid "Door"
+msgstr ""

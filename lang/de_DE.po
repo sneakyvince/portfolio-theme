@@ -1,0 +1,263 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: roots\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/"
+"indicia_theme_update\n"
+"POT-Creation-Date: 2020-02-20T11:20:25+01:00\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Nikolas Grottendieck <github@nikolasgrottendieck.com>\n"
+"Language-Team: roots\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Theme Name of the theme
+msgid "Indicia Interactiv Starter Theme"
+msgstr "Sage Starter Theme"
+
+#. Description of the theme
+msgid "The base theme on which Indicia Interactiv builds its WordPress themes"
+msgstr ""
+
+#. Author of the theme
+msgid "Indicia Interactiv"
+msgstr "Indicia Interactiv"
+
+#. Author URI of the theme
+msgid "https://www.indicia-interactiv.nl"
+msgstr ""
+
+#: 404.php:4
+msgid "Sorry, de pagina die je probeert te bezoeken bestaat niet."
+msgstr ""
+"Entschuldigung, aber die Seite, die Sie besuchen möchten, existiert nicht."
+
+#: base.php:15
+msgid ""
+"U gebruikt een <strong>verouderde</strong> browser. We raden u aan om <a "
+"href=\"http://browsehappy.com/\">een nieuwe versie te gebruiken</a> om te "
+"profiteren van alle mogelijkheden op de website."
+msgstr ""
+"Du benutzt einen <strong>veralteten</strong> Browser. Bitte <a href=\"http://"
+"browsehappy.com/\">aktualisiere deinen Browser</a>, um dein Erlebnis zu "
+"verbessern."
+
+#: functions.php:22
+msgid "Fout bij lokaliseren %s voor opname"
+msgstr ""
+
+#: index.php:5 search.php:5
+msgid "Sorry, geen resultaten gevonden."
+msgstr "Es tut uns leid, aber es wurden keine Ergebnisse gefunden."
+
+#: lib/Acf/HeadingField.php:20
+msgid "Titel niveau"
+msgstr ""
+
+#: lib/Acf/HeadingField.php:37
+msgid "Titel"
+msgstr ""
+
+#: lib/extras.php:41
+msgid "Vervolgd"
+msgstr ""
+
+#: lib/setup.php:23
+msgid "Hoofd Navigatie"
+msgstr "Primäre Navigation"
+
+#: lib/setup.php:60
+msgid "Primaire"
+msgstr "Primär"
+
+#: lib/setup.php:69
+msgid "Footer"
+msgstr "Fußzeile"
+
+#: lib/titles.php:13
+msgid "Laatste berichten"
+msgstr ""
+
+#: lib/titles.php:18
+msgid "Zoekresultaten voor %s"
+msgstr "Suchergebnisse für %s"
+
+#: lib/titles.php:20
+msgid "Niet gevonden"
+msgstr "Nicht gefunden"
+
+#: templates/comments.php:9
+msgctxt "reactie titel"
+msgid "Eén reactie op &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s reacties op &ldquo;%2$s&rdquo;"
+msgstr[0] "Eine Reaktion auf &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s Reaktionen auf &ldquo;%2$s&rdquo;"
+
+#: templates/comments.php:19
+msgid "&larr; Oudere reacties"
+msgstr "&larr; Ältere Artikel"
+
+#: templates/comments.php:22
+msgid "Nieuwere reacties &rarr;"
+msgstr "Neuere Artikel &rarr;"
+
+#: templates/comments.php:31
+msgid "Reageren is niet mogelijk."
+msgstr ""
+
+#: templates/content-page.php:2 templates/content-single.php:12
+msgid "Pagina's:"
+msgstr "Seiten:"
+
+#: templates/entry-meta.php:2
+msgid "Door"
+msgstr ""
+
+#~ msgid "Sorry, but the page you were trying to view does not exist."
+#~ msgstr ""
+#~ "Es tut uns leid aber die Seite, die du angucken wolltest, existiert nicht."
+
+#~ msgid "Error locating %s for inclusion"
+#~ msgstr "Es trat ein Fehler beim Auffinden von %s für die Einbindung auf"
+
+#~ msgid "Continued"
+#~ msgstr "Weiterlesen"
+
+#~ msgid "Latest Posts"
+#~ msgstr "Neuste Artikel"
+
+#~ msgid "Not Found"
+#~ msgstr "Nicht gefunden"
+
+#~ msgid "&larr; Older comments"
+#~ msgstr "&larr; Ältere Kommentare"
+
+#~ msgid "Newer comments &rarr;"
+#~ msgstr "Neuere Kommentare &rarr;"
+
+#~ msgid "Comments are closed."
+#~ msgstr "Kommentare sind geschlossen."
+
+#~ msgid "Pages:"
+#~ msgstr "Seiten:"
+
+#~ msgid "By"
+#~ msgstr "Von"
+
+#~ msgid "Search for:"
+#~ msgstr "Suche nach:"
+
+#~ msgid "Search"
+#~ msgstr "Suche"
+
+#~ msgid "https://roots.io/sage/"
+#~ msgstr "https://roots.io/sage/"
+
+#~ msgid ""
+#~ "Sage is a WordPress starter theme. <a href=\"https://github.com/roots/sage"
+#~ "\">Contribute on GitHub</a>"
+#~ msgstr ""
+#~ "Sage ist ein Wordpress Starter Theme. <a href=\"https://github.com/roots/"
+#~ "sage\">Arbeite mit auf GitHub</a>"
+
+#~ msgid "Roots"
+#~ msgstr "Roots"
+
+#~ msgid "https://roots.io/"
+#~ msgstr "https://roots.io/"
+
+#~ msgid "Custom Template"
+#~ msgstr "Eigene Vorlage"
+
+#~ msgid "It looks like this was the result of either:"
+#~ msgstr "Es sieht aus als sei dies das Ergebnis von entweder:"
+
+#~ msgid "a mistyped address"
+#~ msgstr "einer fehlerhaft eingegebenen Adresse"
+
+#~ msgid "an out-of-date link"
+#~ msgstr "einem veralteten Link"
+
+#~ msgid "Theme Activation"
+#~ msgstr "Theme Aktivierung"
+
+#~ msgid "%s Theme Activation"
+#~ msgstr "%s Theme Aktivierung"
+
+#~ msgid ""
+#~ "These settings are optional and should usually be used only on a fresh "
+#~ "installation"
+#~ msgstr ""
+#~ "Diese Einstellungen sind optional und sollten normalerweise nur bei einer "
+#~ "frischen Installation benutzt werden"
+
+#~ msgid "Create static front page?"
+#~ msgstr "Statische Startseite anlegen?"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "Create a page called Home and set it to be the static front page"
+#~ msgstr ""
+#~ "Erstelle eine Home genannte Seite und mache sie zur statischen Startseite"
+
+#~ msgid "Change permalink structure?"
+#~ msgstr "Permalinkstruktur ändern?"
+
+#~ msgid "Update permalink structure?"
+#~ msgstr "Permalinkstruktur aktualisieren?"
+
+#~ msgid "Change permalink structure to /&#37;postname&#37;/"
+#~ msgstr "Ändere die Permalinkstruktur zu /&#37;postname&#37;/"
+
+#~ msgid "Create navigation menu?"
+#~ msgstr "Navigationsmenü anlegen?"
+
+#~ msgid "Create the Primary Navigation menu and set the location"
+#~ msgstr "Erstelle das primäre Navigationsmenü und lege den Ort fest"
+
+#~ msgid "Add pages to menu?"
+#~ msgstr "Seiten zum Menü hinzufügen?"
+
+#~ msgid "Add all current published pages to the Primary Navigation"
+#~ msgstr ""
+#~ "Füge alle derzeit veröffentlichten Seiten zur primären Navigation hinzu"
+
+#~ msgid "Home"
+#~ msgstr "Startseite"
+
+#~ msgid "Daily Archives: %s"
+#~ msgstr "Tägliche Archive: %s"
+
+#~ msgid "Monthly Archives: %s"
+#~ msgstr "Monatliche Archive: %s"
+
+#~ msgid "Yearly Archives: %s"
+#~ msgstr "Jährliche Archive: %s"
+
+#~ msgid "Author Archives: %s"
+#~ msgstr "Autorarchive: %s"
+
+#~ msgid "Roots Starter Theme"
+#~ msgstr "Roots Starter Theme"
+
+#~ msgid "http://roots.io/starter-theme/"
+#~ msgstr "http://roots.io/starter-theme/"
+
+#~ msgid ""
+#~ "Roots is a WordPress starter theme based on HTML5 Boilerplate & "
+#~ "Bootstrap. <a href=\"https://github.com/roots/roots/contributors"
+#~ "\">Contribute on GitHub</a>"
+#~ msgstr ""
+#~ "Roots ist ein WordPress Starter Theme basierend auf HTML5 Boilerplate & "
+#~ "Bootstrap. <a href=\"https://github.com/roots/roots/contributors\">Mach "
+#~ "mit auf GitHub</a>"
+
+#~ msgid "http://roots.io/"
+#~ msgstr "http://roots.io/"
