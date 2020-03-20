@@ -1,0 +1,74 @@
+.posts-navigation {
+	display         : flex;
+	justify-content : center;
+	margin-top      : rem-calc(80px);
+
+	.nav-next {
+		& a::after {
+			@include pseudo-icon;
+			background-position-x : rem-calc(3px);
+			width                 : rem-calc(25px);
+			height                : rem-calc(25px);
+			margin-left           : rem-calc(5px);
+			background-image      : url('../icons/arrow-right-250-white.svg');
+		}
+	}
+
+	.nav-previous {
+		& a::before {
+			@include pseudo-icon;
+			background-position-x : rem-calc(-3px);
+			width                 : rem-calc(25px);
+			height                : rem-calc(25px);
+			margin-right          : rem-calc(5px);
+			background-image      : url('../icons/arrow-left-250-white.svg');
+		}
+	}
+
+	.nav-links {
+		display : flex;
+
+		& > * {
+			margin-right : rem-calc(20px);
+
+			&:last-child {
+				margin-right : 0;
+			}
+		}
+
+		div[class^='nav-'] {
+			position      : relative;
+			@include background-gradient($gradient-2);
+			border-radius : rem-calc(900px);
+
+			&::before {
+				@include pseudo-full-wh;
+				opacity       : 0;
+				border-radius : rem-calc(900px);
+				@include background-gradient($gradient-1, $darken : true);
+				@include transition;
+			}
+
+			&:hover {
+				&::before {
+					opacity : 1;
+				}
+			}
+
+			& a {
+				position    : relative;
+				z-index     : 2;
+				@include disable-anchor-styles;
+				display     : flex;
+				padding     : rem-calc(20px 50px);
+				color       : $white;
+				font-weight : $global-weight-semi-bold;
+				font-size   : rem-calc(20px);
+
+				&:hover {
+					color : $white
+				}
+			}
+		}
+	}
+}

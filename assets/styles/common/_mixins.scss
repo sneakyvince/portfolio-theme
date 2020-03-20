@@ -1,0 +1,162 @@
+@mixin transition( $speed: 150ms, $prop: all ) {
+	transition : $prop $speed ease-out;
+}
+
+@mixin pseudo-icon {
+	content             : '';
+	display             : inline-block;
+	background-repeat   : no-repeat;
+	background-position : center center;
+	background-size     : cover;
+}
+
+@mixin pseudo-full-wh {
+	content  : '';
+	position : absolute;
+	top      : 0;
+	left     : 0;
+	right    : 0;
+	bottom   : 0;
+}
+
+@mixin object-fit($position: cover) {
+	object-fit  : $position;
+	font-family : 'object-fit: #{$position};';
+}
+
+@mixin drop-capped-text( $base-font-size, $base-line-height, $multiplier: 2 ) {
+
+	// Set the font-size and line-height for the text element
+	font-size   : $base-font-size;
+	line-height : $base-line-height;
+
+	// Set the drop-cap size so that it's height is exactly two lines of regular text
+	&:first-of-type::first-letter {
+		float        : left;
+		margin-right : 0.2em;
+		font-size    : $base-line-height * $multiplier;
+		line-height  : $base-line-height * $multiplier;
+
+		// Firefox specific styling since FF doesn't calculate line-height on floated pseudo elements
+		@-moz-document url-prefix() {
+			$firefox-padding : ( $base-line-height - $base-font-size ) / 2;
+			margin           : $firefox-padding 0.2em 0 0;
+		}
+	}
+}
+
+
+@mixin card() {
+	border-radius : rem-calc(10px);
+	box-shadow    : rem-calc(0 6px 18px) rgba($black, 0.1);
+}
+
+@mixin disable-anchor-styles() {
+	color           : inherit;
+	text-decoration : none;
+
+	&:hover {
+		color           : inherit;
+		text-decoration : none;
+	}
+
+	&:active {
+		color : inherit;
+	}
+}
+
+@mixin border-btm-hover($width: 2px ) {
+	border-bottom : $width solid transparent;
+
+	&:hover {
+		border-bottom-color : currentColor;
+	}
+
+	&:active {
+		border-bottom-color : currentColor;
+	}
+}
+
+@mixin background-gradient( $gradient, $direction: to top, $darken:false ) {
+
+	@if $darken {
+		background : linear-gradient(
+				$direction,
+				darken(map-get($gradient, first), 5),
+				darken(map-get($gradient, second), 5),
+		);
+	} @else {
+		background : linear-gradient(
+				$direction,
+				map-get($gradient, first),
+				map-get($gradient, second),
+		);
+	}
+}
+
+@mixin text-crop($line-height: 1.3, $top-adjustment: 0px, $bottom-adjustment: 0px) {
+	// Configured in Step 1
+	$top-crop            : 5;
+	$bottom-crop         : 4;
+	$crop-font-size      : 32;
+	$crop-line-height    : 1;
+
+	// Apply values to calculate em-based margins that work with any font size
+	$dynamic-top-crop    : max(($top-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+	$dynamic-bottom-crop : max(($bottom-crop + ($line-height - $crop-line-height) * ($crop-font-size / 2)), 0) / $crop-font-size;
+
+	// Mixin output
+	line-height          : $line-height;
+
+	&::before,
+	&::after {
+		content : '';
+		display : block;
+		height  : 0;
+		width   : 0;
+	}
+
+	&::before {
+		margin-bottom : calc(-#{$dynamic-top-crop}em + #{$top-adjustment});
+	}
+
+	&::after {
+		margin-top : calc(-#{$dynamic-bottom-crop}em + #{$bottom-adjustment});
+	}
+}
+
+// Mixin generated at: http://text-crop.eightshapes.com/?typeface-selection=custom-font&typeface=Lato&custom-typeface-name=-apple-system&custom-typeface-url=&custom-typeface-weight=400&custom-typeface-style=normal&weight-and-style=100&size=32&line-height=1&top-crop=4&bottom-crop=4
+
+/* Usage Examples
+    .my-level-1-heading-class {
+        @include text-crop; // Will use default line height of 1.3
+        font-size: 48px;
+        margin: 0 0 0 16px;
+    }
+
+    .my-level-2-heading-class {
+        @include text-crop; // Will use default line height of 1.3
+        font-size: 32px; // Don't need to change any settings, will work with any font size automatically
+        margin: 0 0 0 16px;
+    }
+
+    .my-body-copy-class {
+        @include text-crop($line-height: 2); // Larger line height desired, set the line height via the mixin
+        font-size: 16px;
+    }
+
+    // Sometimes depending on the font-size, the rendering, the browser, etc. you may need to tweak the output.
+    // You can adjust the top and bottom cropping when invoking the component using the $top-adjustment and $bottom-adjustment settings
+
+    .slight-adjustment-needed {
+        @include text-crop($top-adjustment: -0.5px, $bottom-adjustment: 2px);
+        font-size: 17px;
+    }
+
+    .dont-do-this {
+        @include text-crop;
+        font-size: 16px;
+        line-height: 3; // DO NOT set line height outside of the mixin, the mixin needs the line height value to calculate the crop correctly
+    }
+*/
+

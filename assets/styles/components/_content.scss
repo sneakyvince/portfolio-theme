@@ -1,0 +1,152 @@
+// This .item is needed to ensure that the hover animations work properly.
+.item {
+	position   : relative;
+	box-sizing : border-box;
+	@include disable-anchor-styles;
+
+	&__dotted-lines {
+		position      : absolute;
+		left          : 0;
+		right         : 0;
+		top           : 0;
+		bottom        : 0;
+		border        : rem-calc(3px) dashed $gray-2;
+		border-radius : rem-calc(40px);
+		opacity       : 0;
+		@include transition($prop : opacity);
+	}
+
+	// All hover states for this module.
+	&:hover {
+		&__dotted-lines {
+			opacity : 1;
+		}
+
+		.article {
+			transform : translate3d(
+					rem-calc(20px),
+					rem-calc(-20px),
+					0
+			);
+			//box-shadow : rem-calc(-5px 5px 30px) rgba($black, 0.05);
+
+			&__read-more {
+				opacity : 1;
+			}
+
+			&__category {
+				opacity : 0;
+			}
+		}
+	}
+}
+
+
+// Article card.
+.article {
+	$article        : &;
+	position        : relative;
+	display         : flex;
+	overflow        : hidden;
+	flex-direction  : column;
+	justify-content : space-between;
+	height          : 100%;
+	min-height      : rem-calc(200px);
+	padding         : rem-calc(35px);
+	//color           : $body-font-color;
+	background      : $white;
+	border-radius   : rem-calc(40px);
+	transform       : translateZ(0);
+	//box-shadow: 0 19px 26px -17px rgba(2,31,63,.15);
+	//box-shadow          : rem-calc(-5px 5px 30px) rgba($black, 0.1);
+	//box-shadow : -10px 10px 20px rgba($black, 0.1);
+	@include transition;
+
+	@include breakpoint(medium up) {
+		min-height : rem-calc(355px);
+	}
+
+	&__header, &__footer {
+		position : relative;
+		z-index  : 2;
+	}
+
+	&__header {
+		padding-bottom : rem-calc(30px);
+
+		& > *:last-child {
+			margin-bottom : 0;
+		}
+	}
+
+	&__title {
+		@extend h5;
+		overflow      : hidden;
+		text-overflow : ellipsis;
+		margin-bottom : rem-calc(20px);
+		//@include text-crop;
+	}
+
+	&__excerpt {
+		margin-bottom : rem-calc(20px);
+	}
+
+	&__footer {
+		position    : relative;
+		//border-top      : rem-calc(2px) solid $gray-1;
+		padding-top : rem-calc(30px);
+		display     : flex;
+		align-items : center;
+		//justify-content : flex-end;
+	}
+
+	&__category {
+		@include transition;
+		//@include text-crop;
+	}
+
+	&__read-more {
+		display  : flex;
+		@include transition;
+		opacity  : 0;
+		position : absolute;
+
+		&::after {
+			@include pseudo-icon;
+			width            : rem-calc(20px);
+			height           : rem-calc(20px);
+			margin-left      : rem-calc(5px);
+			background-image : url('../icons/arrow-right-175.svg');
+		}
+	}
+
+	// When the article has a featured image, use it as a background for the card.
+	&--background-image {
+		justify-content : flex-end;
+		color           : $white;
+
+		#{$article}__overlay {
+			position   : absolute;
+			z-index    : 1;
+			bottom     : 0;
+			left       : 0;
+			width      : 100%;
+			height     : 100%;
+			background : linear-gradient(0deg, rgba($black, 0.75) 0%, rgba($gray-1, 0.25) 100%);
+		}
+
+		#{$article}__image {
+			position : absolute;
+			display  : block;
+			top      : 0;
+			left     : 0;
+			width    : 100%;
+			height   : 100%;
+			@include object-fit(cover);
+		}
+
+		#{$article}__read-more::after {
+			background-image : url('../icons/arrow-right-175-white.svg');
+		}
+	}
+}

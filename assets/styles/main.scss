@@ -1,0 +1,29 @@
+// Variables
+@import 'common/variables';
+
+// Foundation
+@import '~foundation-sites/scss/foundation.scss';
+@import 'common/foundation';
+
+//Global
+@import 'common/mixins';
+@import 'common/global';
+@import 'common/animations';
+
+//Components
+@import 'components/buttons';
+@import 'components/comments';
+@import 'components/forms';
+@import 'components/grid';
+@import 'components/content';
+@import 'components/wp-classes';
+@import 'components/posts_navigation';
+@import 'components/dropdownmenu';
+
+//Layouts
+@import 'layouts/header';
+@import 'layouts/sidebar';
+@import 'layouts/footer';
+@import 'layouts/pages';
+@import 'layouts/posts';
+@import 'layouts/tinymce';

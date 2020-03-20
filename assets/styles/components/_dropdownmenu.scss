@@ -1,0 +1,58 @@
+.dropdown.menu > li.is-active > a {
+	background : rgba(0, 0, 0, 0);
+	//color      : $white;
+}
+
+.submenu {
+	border: 1px solid black;
+	border-radius  : rem-calc(7px);
+	//background     : #0F131D;
+	pointer-events : none;
+}
+
+.is-dropdown-submenu-parent {
+
+	&.is-active {
+		& > a::after {
+			transform : rotate(180deg) translateY(50%);
+		}
+	}
+
+	& > a {
+		//padding       : rem-calc(12px 18px);
+		padding-right : rem-calc(28px); // clearance for chevron icon
+		position      : relative;
+
+		// Dropdown arrow
+		&::after {
+			@include pseudo-icon;
+			position            : absolute;
+			width               : rem-calc(20px);
+			height              : rem-calc(20px);
+			top                 : 50%;
+			right               : 0;
+			margin-top          : 0;
+			transform           : translateY(-50%);
+			background-image    : url('../icons/chevron-down-175.svg');
+			background-size     : 150%;
+			@include transition($prop : transform);
+		}
+	}
+}
+
+.submenu {
+	padding        : rem-calc(5px);
+	border-radius  : rem-calc(0 0 20px 20px);
+	pointer-events : none;
+	z-index        : 9999;
+
+	& .menu-item a {
+
+		border-radius: 900px;
+		pointer-events : auto;
+
+		&:hover {
+			@include background-gradient($gradient-1);
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "indicia-wp/theme_base",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "A WordPress starter theme with a modern front-end development workflow. Based on HTML5 Boilerplate, webpack, Roots Sage, and Foundation.",
+  "homepage": "https://www.indicia-interactiv.nl",
+  "authors": [
+    {
+      "name": "Remy van Velthuijsen",
+      "email": "remy.van.velthuijsen@indicia.nl"
+    },
+    {
+      "name": "Stijn Bastiaansen",
+      "email": "stijn.bastiaansen@indicia.nl"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "composer/installers": "~1.0"
+  }
+}

@@ -1,0 +1,58 @@
+body {
+	&.development {
+		&:before {
+			position   : fixed;
+			top        : 0;
+			right      : 0;
+			background : white;
+			color      : red;
+			content    : 'small';
+			font-size  : 10px;
+			padding    : 0 2px;
+			z-index    : 9999999999999999;
+
+			@include breakpoint(medium only) {
+				content : 'medium';
+			}
+			@include breakpoint(large only) {
+				content : 'large';
+			}
+			@include breakpoint(xlarge) {
+				content : 'xlarge';
+			}
+		}
+	}
+}
+
+// Wordpress admin bar clearance
+body.admin-bar .header {
+	//top : 32px;
+}
+
+.content {
+	padding: rem-calc(50px 0);
+}
+
+.main {
+	height: 100%; // So that .wp-block-cover doesn't grow to insane height.
+}
+
+//.home .wrap.container,
+//.archive .wrap.container {
+//	background : #F5F5F6;
+//	background : #F2F3F6;
+//}
+
+.row .row.collapse {
+	margin-left  : 0;
+	margin-right : 0;
+}
+
+.site-off-canvas-content {
+	//padding-top: 55px;
+}
+
+.card {
+	@include card();
+}
+

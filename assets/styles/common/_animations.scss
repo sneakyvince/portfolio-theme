@@ -1,0 +1,31 @@
+// Animations
+html:not(.no-js) {
+
+	.article.animate-gsap {
+		opacity: 0;
+	}
+
+	.anim-scroll {
+		visibility: hidden;
+
+		&--to-bottom {
+			visibility: hidden;
+			transform: translate3d(0, -100%, 0);
+		}
+
+		&--to-top {
+			visibility: hidden;
+			transform: translate3d(0, 100%, 0);
+		}
+
+		&--to-left {
+			visibility: hidden;
+			transform: translate3d(-100%, 0, 0);
+		}
+
+		&--to-right {
+			visibility: hidden;
+			transform: translate3d(100%, 0, 0);
+		}
+	}
+}

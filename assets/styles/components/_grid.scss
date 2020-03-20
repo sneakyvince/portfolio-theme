@@ -1,0 +1,22 @@
+// Grid system
+.content {
+	@include flex-grid-row;
+}
+.main {
+	@include flex-grid-column($main-sm-columns);
+
+	//.sidebar-primary & {
+	//	@include flex-grid-column($main-sm-columns - $sidebar-sm-columns);
+	//
+	//	@include breakpoint(medium down) {
+	//		@include flex-grid-column($main-sm-columns);
+	//	}
+	// }
+}
+.sidebar {
+	@include flex-grid-column($sidebar-sm-columns);
+
+	@include breakpoint(medium down) {
+		@include flex-grid-column($main-sm-columns);
+	}
+}
