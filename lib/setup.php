@@ -63,7 +63,7 @@ function action__widgets_init() {
 	register_sidebar( [
 		'name'          => __( 'Footer', 'indicia-theme' ),
 		'id'            => 'sidebar-footer',
-		'before_widget' => '<section class="widget %1$s %2$s">',
+		'before_widget' => '<section class="cell small-12 medium-4 large-3 widget %1$s %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
@@ -82,7 +82,7 @@ function display_sidebar() {
 		// The sidebar will NOT be displayed if ANY of the following return true.
 		// @link https://codex.wordpress.org/Conditional_Tags.
 		is_404(),
-		is_front_page(),
+//		is_front_page(),
 	], true );
 
 	return apply_filters( 'indicia_theme_display_sidebar', $display );

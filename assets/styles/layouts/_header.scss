@@ -13,60 +13,14 @@
 }
 
 .header {
-	//height          : 50vh;
-	//background      : $white;
-	//color           : $white;
-	display         : flex;
-	flex-direction  : column;
-	justify-content : space-between;
-	position        : relative;
-
-	a {
-		line-height : rem-calc(20px);
-		@include disable-anchor-styles;
-		@include transition;
-	}
+	position   : relative;
+	height     : 400px;
+	background : $surface-background;
 
 	&__title {
 		position  : absolute;
 		top       : 50%;
 		left      : 50%;
 		transform : translate(-50%, -50%);
-	}
-
-	.top-bar {
-		font-weight : $global-weight-semi-bold;
-		padding     : rem-calc(15px 0);
-	}
-
-	.menu a:not(.is-dropdown-submenu-parent) {
-		@include border-btm-hover;
-	}
-
-
-	&__blobs {
-		overflow : hidden;
-
-		svg {
-			height : 100vh;
-			width  : 100vw;
-		}
-	}
-}
-
-.nav {
-	width   : 100%;
-	z-index : 900;
-
-
-	.sticky {
-		//background : linear-gradient(0deg, #0F131D 100%, #0F131D 0%);
-		//background: linear-gradient(to top, rgba( 255,0,0,1 ), rgba( 255,0,0,0 ) );
-	}
-
-	.sticky.is-stuck {
-		//background : linear-gradient(to bottom, rgba( $white, 0.8 ), rgba( $white, 0.7 ) );
-		background: rgba($white, 0.9);
-		background: rgba($body-background, 0.9 );
 	}
 }

@@ -1,4 +1,4 @@
-// This .item is needed to ensure that the hover animations work properly.
+// This .item is needed to ensure that the hover animations work properly
 .item {
 	position   : relative;
 	box-sizing : border-box;
@@ -10,9 +10,9 @@
 		right         : 0;
 		top           : 0;
 		bottom        : 0;
-		border        : rem-calc(3px) dashed $gray-2;
+		border        : rem-calc(3px) dashed $surface-border-color;
 		border-radius : rem-calc(40px);
-		opacity       : 0;
+		//opacity       : 0;
 		@include transition($prop : opacity);
 	}
 
@@ -41,8 +41,7 @@
 	}
 }
 
-
-// Article card.
+// Article card
 .article {
 	$article        : &;
 	position        : relative;
@@ -53,13 +52,10 @@
 	height          : 100%;
 	min-height      : rem-calc(200px);
 	padding         : rem-calc(35px);
-	//color           : $body-font-color;
-	background      : $white;
+	background      : $surface-background;
 	border-radius   : rem-calc(40px);
+	box-shadow      : 0 1px 2px var($shadow-1);
 	transform       : translateZ(0);
-	//box-shadow: 0 19px 26px -17px rgba(2,31,63,.15);
-	//box-shadow          : rem-calc(-5px 5px 30px) rgba($black, 0.1);
-	//box-shadow : -10px 10px 20px rgba($black, 0.1);
 	@include transition;
 
 	@include breakpoint(medium up) {
@@ -84,7 +80,6 @@
 		overflow      : hidden;
 		text-overflow : ellipsis;
 		margin-bottom : rem-calc(20px);
-		//@include text-crop;
 	}
 
 	&__excerpt {
@@ -102,7 +97,6 @@
 
 	&__category {
 		@include transition;
-		//@include text-crop;
 	}
 
 	&__read-more {
@@ -132,7 +126,7 @@
 			left       : 0;
 			width      : 100%;
 			height     : 100%;
-			background : linear-gradient(0deg, rgba($black, 0.75) 0%, rgba($gray-1, 0.25) 100%);
+			background : linear-gradient(0deg, rgba($black, 0.75) 0%, rgba($primary-text, 0.25) 100%);
 		}
 
 		#{$article}__image {

@@ -1,7 +1,44 @@
 .footer {
-	padding: rem-calc(100px 0);
-
 	&__nav {
+		border-top  : 1px solid $surface-border-color;
+		padding-top : 40px;
 
+		.widget {
+
+			h3 {
+				margin-top    : rem-calc(10px);
+				margin-bottom : rem-calc(15px);
+				font-size     : rem-calc(18px);
+			}
+
+			li {
+				display       : block;
+				margin-bottom : rem-calc(15px);
+			}
+
+			a {
+				//@include disable-anchor-styles;
+				//opacity : 0.5;
+				//@include transition($prop : opacity);
+
+				//&:hover {
+				//	opacity : 1;
+				//}
+				padding       : rem-calc(10px 15px);
+				border-radius : rem-calc(10px);
+				line-height   : rem-calc(20px);
+				@include disable-anchor-styles;
+				@include transition;
+
+				&:hover {
+					background : rgba($surface-border-color, 0.8);
+				}
+			}
+		}
+	}
+
+	&__copyright {
+		color  : $secondary-text;
+		margin : rem-calc(35px 0);
 	}
 }
