@@ -48,11 +48,12 @@ function hasScrolled() {
 		navbar.classList.add( 'navbar--surface' )
 	}
 	// When the user scrolled back to the top
-	else if ( currentScrollPos <= 70 ) {
+	else if ( currentScrollPos <= 20 ) {
 		navbar.classList.remove( 'navbar--surface' );
 		stickied = false;
 	}
 
+	// Just for efficiency's sake
 	if ( hover )
 		return;
 
