@@ -14,7 +14,7 @@ if ( ! ( 'IntersectionObserver' in window ) ||
 $( document ).ready( () => {
 	//Require all components here.
 	require( './components/foundation' );
-	require( './components/navbar' );
+	require( './components/header' );
 	require( './components/animations' );
 
 	document.body.className.replace( /-/g, '_' ).split( /\s+/ ).forEach( cls => {

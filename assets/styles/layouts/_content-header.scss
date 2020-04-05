@@ -1,0 +1,8 @@
+.page-header, .single-header {
+	position   : relative;
+	background : $surface-background;
+
+	&__inner {
+		padding : rem-calc(100px 0 150px 0);
+	}
+}

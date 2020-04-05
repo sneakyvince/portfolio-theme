@@ -1,5 +1,8 @@
-<?php use IndiciaInteractiv\Theme\Titles; ?>
-
-<div class="page-header">
-	<h1><?= Titles\title(); ?></h1>
-</div>
+<header id="content-header" class="page-header">
+	<div class="grid-container">
+		<div class="page-header__inner">
+			<h3><?php bloginfo( 'description' ); ?></h3>
+			<h1><?php bloginfo( 'name' ); ?></h1>
+		</div>
+	</div>
+</header>

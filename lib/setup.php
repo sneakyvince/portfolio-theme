@@ -103,3 +103,35 @@ function action__wp_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\action__wp_enqueue_scripts', 100 );
 
+add_action( 'init', function () {
+
+	register_pattern( 'tavern/hero-1', [
+		'title'   => __( 'Hero 1' ),
+		'content' =>
+			'<!-- wp:cover {"customOverlayColor":"#273f60","align":"full"} -->
+			<div class="wp-block-cover alignfull has-background-dim" style="background-color:#273f60">
+				<div class="wp-block-cover__inner-container">
+					<!-- wp:heading {"align":"center"} -->
+					<h2 class="has-text-align-center">Heading Title Here</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"align":"center"} -->
+					<p class="has-text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons {"align":"center"} -->
+					<div class="wp-block-buttons aligncenter">
+						<!-- wp:button {"className":"is-style-outline"} -->
+						<div class="wp-block-button is-style-outline"><a class="wp-block-button__link">Button A</a></div>
+						<!-- /wp:button -->
+						<!-- wp:button {"className":"is-style-outline"} -->
+						<div class="wp-block-button is-style-outline"><a class="wp-block-button__link">Button B</a></div>
+						<!-- /wp:button -->
+					</div>
+					<!-- /wp:buttons -->
+				</div>
+			</div>
+			<!-- /wp:cover -->'
+	] );
+
+} );

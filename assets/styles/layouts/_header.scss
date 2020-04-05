@@ -13,10 +13,18 @@
 }
 
 .header {
-	position   : relative;
-	background : $surface-background;
+	@include transition;
+	position      : fixed;
+	top           : 0;
+	left          : 0;
+	width         : 100%;
+	z-index       : 999;
+	border-bottom : 1px solid transparent;
 
-	&__inner {
-		padding : rem-calc(100px 0 150px 0);
+	&--surface {
+		border-bottom       : 1px solid $surface-border-color;
+		background          : $main-background;
+		transition-delay    : 0s;
+		transition-duration : 0s;
 	}
 }

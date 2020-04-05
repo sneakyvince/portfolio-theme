@@ -16,7 +16,7 @@ if ( has_blocks( $post->post_content ) ) {
 
 //	wp_die(var_dump( $blocks ));
 
-	foreach ($blocks as $block ) {
+	foreach ( $blocks as $block ) {
 		if ( $blocks[0]['blockName'] === 'core/heading' ) {
 
 		}
@@ -26,48 +26,47 @@ if ( has_blocks( $post->post_content ) ) {
 }
 
 ?>
-
+<?php get_template_part( 'templates/single', 'header' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<article <?php post_class(); ?>>
-		<div class="grid-x grid-margin-x">
-
-			<header class="cell small-12 large-8">
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-
-			<div class="cell small-12 large-4">
-				<?php get_template_part( 'templates/entry-meta' ); ?>
-			</div>
-
-			<div id="entry-content" class="entry-content cell small-12 large-8">
-				<?php the_content(); ?>
-			</div>
-
-			<div class="entry-content cell small-12 large-4" data-sticky-container>
-				<div class="sticky" data-sticky data-anchor="entry-content" data-margin-top="0">
-					<div>
-						<?php
-						// Get post content to extract slider shortcode.
-//						$blocks = parse_blocks( get_the_content() );
-//						foreach ( $blocks as $block ) {
-//							if ( 'soliloquy/soliloquywp' === $block['blockName'] ) {
-//								echo 'bruh 😤';
-//								break;
-//							}
-//						}
-						// Display the title.?>
+	<section class="section-wrap">
+		<article <?php post_class(); ?>>
+			<div class="grid-container">
+				<div class="grid-x grid-margin-x">
+					<div class="cell small-12">
+						<?php get_template_part( 'templates/entry-meta' ); ?>
 					</div>
+
+					<div id="entry-content" class="entry-content cell small-12 large-8">
+						<?php the_content(); ?>
+					</div>
+
+					<div class="entry-content cell small-12 large-4" data-sticky-container>
+						<div class="sticky" data-sticky data-anchor="entry-content" data-margin-top="0">
+							<div>
+								<?php
+								// Get post content to extract slider shortcode.
+								//						$blocks = parse_blocks( get_the_content() );
+								//						foreach ( $blocks as $block ) {
+								//							if ( 'soliloquy/soliloquywp' === $block['blockName'] ) {
+								//								echo 'bruh 😤';
+								//								break;
+								//							}
+								//						}
+								// Display the title.?>
+							</div>
+						</div>
+
+					</div>
+
+					<footer class="cell small-12">
+						<?php wp_link_pages( [
+							'before' => '<nav class="page-nav"><p>' . __( 'Pagina\'s:', 'indicia-theme' ),
+							'after'  => '</p></nav>',
+						] ); ?>
+					</footer>
 				</div>
-
 			</div>
-
-			<footer class="cell small-12">
-				<?php wp_link_pages( [
-					'before' => '<nav class="page-nav"><p>' . __( 'Pagina\'s:', 'indicia-theme' ),
-					'after'  => '</p></nav>',
-				] ); ?>
-			</footer>
-		</div>
-	</article>
+		</article>
+	</section>
 <?php endwhile; ?>

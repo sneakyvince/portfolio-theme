@@ -1,15 +1,15 @@
 import gsap from 'gsap'
 
-const navbar = document.getElementById( 'site-navbar' );
 const header = document.getElementById( 'site-header' );
-header.style.paddingTop = navbar.offsetHeight + 'px';
+const contentHeader = document.getElementById( 'content-header' );
+contentHeader.style.paddingTop = header.offsetHeight + 'px';
 
 // Show the navbar on hover
 let hover = false;
-navbar.addEventListener( 'mouseleave', () => hover = false );
-navbar.addEventListener( 'mouseenter', () => {
+header.addEventListener( 'mouseleave', () => hover = false );
+header.addEventListener( 'mouseenter', () => {
 	hover = true;
-	gsap.to( navbar, {
+	gsap.to( header, {
 		duration : 0.4,
 		opacity  : 1,
 		ease     : 'power4.out'
@@ -25,7 +25,7 @@ let prevScrollPos = window.pageYOffset;
 
 // Listen for when user scrolls
 window.onscroll = () => {
-	didScroll = true;
+	didScroll = true
 };
 
 // Only fire hasScrolled() every 10 ms
@@ -40,25 +40,23 @@ function hasScrolled() {
 	let currentScrollPos = window.pageYOffset;
 
 	// Make sure they scroll more than delta
-	if ( Math.abs( prevScrollPos - currentScrollPos ) <= scrollThreshold )
-		return;
+	if ( Math.abs( prevScrollPos - currentScrollPos ) <= scrollThreshold ) return;
 
 	// When the user is just about to scroll past the header
-	if ( currentScrollPos >= header.offsetHeight - navbar.offsetHeight ) {
-		navbar.classList.add( 'navbar--surface' )
+	if ( currentScrollPos >= contentHeader.offsetHeight - header.offsetHeight ) {
+		header.classList.add( 'header--surface' )
 	}
 	// When the user scrolled back to the top
 	else if ( currentScrollPos <= 20 ) {
-		navbar.classList.remove( 'navbar--surface' );
+		header.classList.remove( 'header--surface' );
 		stickied = false;
 	}
 
 	// Just for efficiency's sake
-	if ( hover )
-		return;
+	if ( hover ) return;
 
 	// If user hasn't scrolled past header and the navbar is not stickied
-	if ( ( currentScrollPos <= header.offsetHeight ) && ! stickied ) {
+	if ( ( currentScrollPos <= contentHeader.offsetHeight ) && ! stickied ) {
 		opacity = Math.max( 0, 1 - scrollY / 70 );
 		stickied = false;
 	}
@@ -78,7 +76,7 @@ function hasScrolled() {
 	}
 
 	// Set the navbar opacity
-	navbar.style.opacity = opacity.toString();
+	header.style.opacity = opacity.toString();
 
 	// Set the prevScrollPos for the next time hasScrolled() is called
 	prevScrollPos = currentScrollPos;

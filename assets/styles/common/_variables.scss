@@ -1,52 +1,52 @@
 // Grid settings
-$main-sm-columns                 : 12;
-$sidebar-sm-columns              : 4;
+$main-sm-columns                      : 12;
+$sidebar-sm-columns                   : 4;
 
 
 // Facebook colors
-$black                           : #18191A;
-$white                           : #FFF;
+$black                                : #18191A;
+$white                                : #FFF;
 
 // Panel colors
-$main-background                 : $black;
-$surface-background              : #242526;
-$surface-border-color            : #38393A;
+$main-background                      : $black;
+$surface-background                   : #242526;
+$surface-border-color                 : #38393A;
 
 // Text colors
-$primary-text                    : #E4E6EB;
-$primary-heading                 : $primary-text;
-$secondary-text                  : #B0B3B8;
-$primary-icon                    : $secondary-text;
+$primary-text                         : #E4E6EB;
+$primary-heading                      : $primary-text;
+$secondary-text                       : #B0B3B8;
+$primary-icon                         : $secondary-text;
 
 // Shadow colors
-$shadow-1                        : rgba(0, 0, 0, 0.1);
-$shadow-2                        : rgba(0, 0, 0, 0.2);
+$shadow-1                             : rgba(0, 0, 0, 0.1);
+$shadow-2                             : rgba(0, 0, 0, 0.2);
 
 // Colors
-$primary-color                   : #1587CA;
-$secondary-color                 : #18BFBB;
-$chambray                        : #334689;
-$astral                          : #3385AA;
-$bluegreen                       : #0F98BE;
-$tiffanyblue                     : #16BABC;
+$primary-color                        : #1587CA;
+$secondary-color                      : #18BFBB;
+$chambray                             : #334689;
+$astral                               : #3385AA;
+$bluegreen                            : #0F98BE;
+$tiffanyblue                          : #16BABC;
 
 // Gradients
-$gradient-1                      : (
+$gradient-1                           : (
 	first : $primary-color,
 	second : $secondary-color,
 );
 
-$gradient-2                      : (
+$gradient-2                           : (
 	first : $chambray,
 	second : $astral,
 );
 
-$gradient-3                      : (
+$gradient-3                           : (
 	first : $bluegreen,
 	second : $tiffanyblue,
 );
 
-$foundation-palette              : (
+$foundation-palette                   : (
 	primary : $primary-color,
 	secondary : $secondary-color,
 	success : #60C165,
@@ -55,30 +55,30 @@ $foundation-palette              : (
 );
 
 // Fonts general
-$global-font-size                : 16px;
-$global-lineheight               : 1.125;
-$global-weight-normal            : 400;
-$global-weight-medium            : 500;
-$global-weight-semi-bold         : 600;
-$global-weight-bold              : 700;
-$global-weight-black             : 900;
+$global-font-size                     : 16px;
+$global-lineheight                    : 1.125;
+$global-weight-normal                 : 400;
+$global-weight-medium                 : 500;
+$global-weight-semi-bold              : 600;
+$global-weight-bold                   : 700;
+$global-weight-black                  : 900;
 
-$font-stack                      : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-stack                           : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
 // Body
-$body-font-family                : $font-stack;
-$body-font-color                 : $primary-text;
-$body-background                 : $main-background;
-$body-font-size                  : 24px;
-$body-line-height                : 1;
-$paragraph-lineheight            : 1.6;
+$body-font-family                     : $font-stack;
+$body-font-color                      : $primary-text;
+$body-background                      : $main-background;
+$body-font-size                       : 24px;
+$body-line-height                     : 1;
+$paragraph-lineheight                 : 1.6;
 
 // Heading
-$header-font-family              : $font-stack;
-$heading-font-color              : $primary-text;
-$header-margin-bottom            : 0.6rem;
-$header-font-weight              : $global-weight-semi-bold;
-$header-styles                   : (
+$header-font-family                   : $font-stack;
+$heading-font-color                   : $primary-text;
+$header-margin-bottom                 : 0.6rem;
+$header-font-weight                   : $global-weight-semi-bold;
+$header-styles                        : (
 	'small': (
 		'h1': ('fs': 60, 'lh': 68, 'mt': 0, 'mb': $header-margin-bottom),
 		'h2': ('fs': 52, 'lh': 60, 'mt': 0, 'mb': $header-margin-bottom),
@@ -106,59 +106,40 @@ $header-styles                   : (
 );
 
 // Links
-$anchor-color                    : #4599FF;
-$anchor-color-hover              : scale-color($anchor-color, $lightness : -20%);
-$anchor-text-decoration          : underline;
-$anchor-text-decoration-hover    : underline;
+$anchor-color                         : $primary-color;
+$anchor-color-hover                   : scale-color($anchor-color, $lightness : 20%);
+$anchor-text-decoration               : underline;
+$anchor-text-decoration-hover         : underline;
 
 // Top bar
-$topbar-padding                  : 0;
-$topbar-background               : none;
-$topbar-submenu-background       : none;
-$topbar-title-spacing            : 90;
-$titlebar-padding                : 0;
-$titlebar-background             : none;
+$topbar-padding                       : 0;
+$topbar-background                    : none;
+$topbar-submenu-background            : none;
+$topbar-title-spacing                 : 90;
+$titlebar-padding                     : 0;
+$titlebar-background                  : none;
 
 // Grid
-$header-height                   : 215px;
-$main-padding                    : 400px;
-$grid-padding-gutters            : 50px;
-$grid-margin-gutters             : 50px;
-
-
-$grid-container-padding          : (
+$header-height                        : 215px;
+$main-padding                         : 400px;
+$grid-padding-gutters                 : 50px;
+$grid-margin-gutters                  : 50px;
+$grid-container-padding               : (
 	small: 40px,
 	medium: 80px,
 );
 
-$grid-column-gutter              : (
+$grid-column-gutter                   : (
 	small: 40px,
 	medium: 80px,
 );
 
+$dropdownmenu-arrows                  : false;
+$dropdownmenu-border                  : none;
+$dropdownmenu-min-width               : 250px;
+$dropdownmenu-padding                 : rem-calc(10px);
+$dropdownmenu-submenu-background      : $main-background;
+$dropdownmenu-submenu-padding         : 1000;
+$dropdown-menu-item-color-active      : inherit;
+$dropdown-menu-item-background-active : rgba($surface-border-color, 0.8);
 
-//Tabs
-$tab-color                       : $body-font-color;
-$tab-active-color                : $primary-color;
-$tab-background-active           : $white;
-$tab-background                  : $white;
-$tab-item-background-hover       : $white;
-$tab-content-background          : none;
-$tab-content-border              : none;
-$tab-item-padding                : 0;
-$tab-content-padding             : 0;
-
-//Menu
-$dropdown-background             : red;
-$dropdown-border                 : none;
-$dropdown-width                  : auto;
-$dropdown-padding                : 150px 0 0;
-$dropdownmenu-padding            : 0;
-
-// Dropdownmenu
-$dropdownmenu-arrows             : false;
-$dropdownmenu-border             : 0;
-$dropdownmenu-padding            : rem-calc(2000px);
-$dropdownmenu-submenu-background : $main-background;
-//$dropdownmenu-submenu-padding    : 0;
-$dropdownmenu-border             : none;

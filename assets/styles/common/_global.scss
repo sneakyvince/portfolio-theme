@@ -32,32 +32,6 @@ body {
 	background : #144B8C;
 }
 
-// Wordpress admin bar clearance
-body.admin-bar .header {
-	top : 32px;
-}
-
-.site-off-canvas-content {
-	display        : flex;
-	min-height     : 100vh;
-	flex-direction : column;
-}
-
-.wrap.container {
-	flex    : 1;
-	padding : rem-calc(50px 0);
-}
-
-.main {
-	height : 100%; // So that .wp-block-cover doesn't grow to insane height.
-}
-
-.row .row.collapse {
-	margin-left  : 0;
-	margin-right : 0;
-}
-
 .card {
 	@include card();
 }
-

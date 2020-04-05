@@ -8,16 +8,20 @@
 <?php endif; ?>
 
 <?php // Generates a grid view of recent posts ?>
-<div class="grid-x grid-margin-x grid-margin-y">
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php get_template_part( 'templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format() ); ?>
-	<?php endwhile; ?>
-</div>
+<section class="section-wrap">
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x grid-margin-y">
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format() ); ?>
+			<?php endwhile; ?>
+		</div>
+	</div>
 
-<div class="anim-scroll--to-top">
-<?php the_posts_navigation( [
-	'mid_size'  => 9,
-	'prev_text' => __( 'Ouder', 'indicia-theme' ),
-	'next_text' => __( 'Nieuwer', 'indicia-theme' )
-] ); ?>
-</div>
+	<div class="anim-scroll--to-top">
+		<?php the_posts_navigation( [
+			'mid_size'  => 9,
+			'prev_text' => __( 'Ouder', 'indicia-theme' ),
+			'next_text' => __( 'Nieuwer', 'indicia-theme' )
+		] ); ?>
+	</div>
+</section>

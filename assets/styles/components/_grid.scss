@@ -1,22 +1,22 @@
-// Grid system
-.content {
-	@include flex-grid-row;
+// Wordpress admin bar clearance
+body.admin-bar .header {
+	top : 32px;
 }
-.main {
-	@include flex-grid-column($main-sm-columns);
 
-	//.sidebar-primary & {
-	//	@include flex-grid-column($main-sm-columns - $sidebar-sm-columns);
-	//
-	//	@include breakpoint(medium down) {
-	//		@include flex-grid-column($main-sm-columns);
-	//	}
-	// }
+.site-off-canvas-content {
+	display        : flex;
+	min-height     : 100vh;
+	flex-direction : column;
 }
-.sidebar {
-	@include flex-grid-column($sidebar-sm-columns);
 
-	@include breakpoint(medium down) {
-		@include flex-grid-column($main-sm-columns);
-	}
+.wrap-container {
+	flex : 1;
+}
+
+//.main {
+//	height : 100%; // So that .wp-block-cover doesn't grow to insane height.
+//}
+
+.section-wrap {
+	padding : rem-calc(60px 0);
 }

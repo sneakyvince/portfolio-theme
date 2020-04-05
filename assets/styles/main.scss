@@ -15,14 +15,17 @@
 @import 'components/comments';
 @import 'components/forms';
 @import 'components/grid';
-@import 'components/navbar';
 @import 'components/content';
 @import 'components/wp-classes';
 @import 'components/posts_navigation';
-@import 'components/dropdownmenu';
+
+// Foundation components
+@import 'components/foundation/top-bar';
+@import 'components/foundation/dropdown-menu';
 
 //Layouts
 @import 'layouts/header';
+@import 'layouts/content-header';
 @import 'layouts/sidebar';
 @import 'layouts/footer';
 @import 'layouts/pages';

@@ -1,0 +1,51 @@
+.dropdown.menu {
+	.menu-item {
+		margin-right : rem-calc(10px);
+
+		&:last-child {
+			margin-right : 0;
+		}
+	}
+
+	.is-dropdown-submenu-parent {
+		&.is-active {
+			& > a::after {
+				transform : rotate(180deg) translateY(50%);
+			}
+		}
+
+		& > a {
+			padding-right : rem-calc(40px) !important; // clearance for chevron icon
+			position      : relative;
+
+			// Dropdown arrow
+			&::after {
+				@include pseudo-icon;
+				position         : absolute;
+				width            : rem-calc(20px);
+				height           : rem-calc(20px);
+				top              : 50%;
+				right            : 15px;
+				margin-top       : 0;
+				transform        : translateY(-50%);
+				background-image : url('../icons/chevron-down-175-white.svg');
+				background-size  : 150%;
+				@include transition($prop : transform);
+			}
+		}
+	}
+
+	.submenu {
+		border-radius : rem-calc(20px);
+		z-index       : 99;
+		//padding: rem-calc(10px);
+
+		& .menu-item a {
+			@include transition;
+
+			&:hover {
+				background : rgba($surface-border-color, 0.8);
+			}
+		}
+	}
+}
