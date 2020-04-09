@@ -1,0 +1,50 @@
+// Facebook colors
+$black                : #18191A;
+$white                : #FFF;
+
+// Panel colors
+$main-background      : $black;
+$surface-background   : #242526;
+$surface-border-color : #38393A;
+
+// Text colors
+$primary-text         : #E4E6EB;
+$primary-heading      : $primary-text;
+$secondary-text       : #B0B3B8;
+$primary-icon         : $secondary-text;
+
+// Shadow colors
+$shadow-1             : rgba(0, 0, 0, 0.1);
+$shadow-2             : rgba(0, 0, 0, 0.2);
+
+// Colors
+$primary-color        : #1587CA;
+$secondary-color      : #18BFBB;
+$chambray             : #334689;
+$astral               : #3385AA;
+$bluegreen            : #0F98BE;
+$tiffanyblue          : #16BABC;
+
+// Gradients
+$gradient-1           : (
+	first : $primary-color,
+	second : $secondary-color,
+);
+
+$gradient-2           : (
+	first : $chambray,
+	second : $astral,
+);
+
+$gradient-3           : (
+	first : $bluegreen,
+	second : $tiffanyblue,
+);
+
+$foundation-palette   : (
+	primary : $primary-color,
+	secondary : $secondary-color,
+	success : #60C165,
+	warning : #FFC353,
+	alert : #FC6076,
+);

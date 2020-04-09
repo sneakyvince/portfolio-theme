@@ -1,9 +1,11 @@
-// Variables
-@import 'common/variables';
+// Settings
+@import 'settings/colors';
+@import 'settings/typography';
+@import 'settings/layout-elements';
 
 // Foundation
 @import '~foundation-sites/scss/foundation.scss';
-@import 'common/foundation';
+@import 'settings/foundation';
 
 //Global
 @import 'common/mixins';

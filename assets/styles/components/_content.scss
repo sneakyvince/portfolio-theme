@@ -39,6 +39,16 @@
 			}
 		}
 	}
+
+	&:active {
+		.article {
+			transform : translate3d(
+					rem-calc(25px),
+					rem-calc(-25px),
+					0
+			);
+		}
+	}
 }
 
 // Article card

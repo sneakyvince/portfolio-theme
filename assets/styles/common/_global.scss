@@ -35,3 +35,32 @@ body {
 .card {
 	@include card();
 }
+
+//code {
+////	background  : hsla(0, 0%, 100%, .1);
+////	padding     : 3px 5px;
+////	color       : #B3B9C5;
+////	font-weight : 500;
+////}
+
+code {
+	padding       : rem-calc(3px 5px);
+	border-radius : 5px;
+}
+
+a {
+	text-decoration     : none;
+	background-image    : linear-gradient(currentColor, currentColor);
+	background-position : 0 100%;
+	background-repeat   : no-repeat;
+	background-size     : 0 1px;
+	transition          : background-size .15s;
+}
+
+a:hover, a:focus {
+	background-size : 100% 1px;
+}
+
+img {
+	border-radius : rem-calc(10px);
+}

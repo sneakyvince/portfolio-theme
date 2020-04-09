@@ -21,8 +21,6 @@ if ( has_blocks( $post->post_content ) ) {
 
 		}
 	}
-
-
 }
 
 ?>
@@ -68,5 +66,11 @@ if ( has_blocks( $post->post_content ) ) {
 				</div>
 			</div>
 		</article>
+	</section>
+
+	<section>
+		<div class="grid-container">
+			<?php get_template_part( 'templates/navigation' ); ?>
+		</div><!-- /.grid-container -->
 	</section>
 <?php endwhile; ?>

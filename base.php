@@ -17,6 +17,7 @@ use IndiciaInteractiv\Theme\Wrapper;
 <![endif]-->
 
 <div class="off-canvas-content site-off-canvas-content" data-off-canvas-content>
+	<div id="top-anchor"></div> <!-- /#top-anchor -->
 	<?php
 	do_action( 'get_header' );
 	get_template_part( 'templates/header' );

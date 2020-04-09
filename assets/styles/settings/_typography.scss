@@ -1,0 +1,68 @@
+//Font stacks
+$font-stack                   : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-family-monospace        : 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+// Fonts general
+$global-font-size             : 16px;
+$global-lineheight            : 1.125;
+$global-weight-normal         : 400;
+$global-weight-medium         : 500;
+$global-weight-semi-bold      : 600;
+$global-weight-bold           : 700;
+$global-weight-black          : 900;
+
+// Body
+$body-font-family             : $font-stack;
+$body-font-color              : $primary-text;
+$body-background              : $main-background;
+$body-font-size               : 24px;
+$body-line-height             : 1;
+$paragraph-lineheight         : 1.6;
+
+// Heading
+$header-font-family           : $font-stack;
+$heading-font-color           : $primary-text;
+$header-margin-bottom         : 0.6rem;
+$header-font-weight           : $global-weight-semi-bold;
+$header-styles                : (
+	'small': (
+		'h1': ('fs': 60, 'lh': 68, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 52, 'lh': 60, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 44, 'lh': 52, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 34, 'lh': 42, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 26, 'lh': 34, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': $header-margin-bottom)
+	),
+	'medium': (
+		'h1': ('fs': 62, 'lh': 70, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 54, 'lh': 62, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 46, 'lh': 54, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 36, 'lh': 44, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 28, 'lh': 36, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 20, 'lh': 28, 'mt': 0, 'mb': $header-margin-bottom)
+	),
+	'large': (
+		'h1': ('fs': 64, 'lh': 72, 'mt': 16, 'mb': $header-margin-bottom),
+		'h2': ('fs': 56, 'lh': 64, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 48, 'lh': 56, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 40, 'lh': 48, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 32, 'lh': 40, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 24, 'lh': 32, 'mt': 0, 'mb': $header-margin-bottom)
+	),
+);
+
+// Links
+$anchor-color                 : $primary-color;
+$anchor-color-hover           : scale-color($anchor-color, $lightness : 20%);
+$anchor-text-decoration       : none;
+$anchor-text-decoration-hover : none;
+
+// Code
+$enable-code-inline           : false;
+$code-color                   : $primary-text;
+$code-font-family             : $font-family-monospace;
+$code-font-weight             : 400;
+$code-background              : $surface-border-color;
+$code-border                  : none;
+$code-padding                 : 0.2rem 0.4rem;
+$code-block-padding           : rem-calc(15px 20px);

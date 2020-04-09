@@ -10,8 +10,12 @@
 			@include disable-anchor-styles;
 			@include transition;
 
-			&:hover {
+			&:hover, &:focus {
 				background : rgba($surface-border-color, 0.8);
+			}
+
+			&:active {
+				background : rgba($surface-border-color, 0.4);
 			}
 		}
 

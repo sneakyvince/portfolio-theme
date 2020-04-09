@@ -5,6 +5,7 @@ import $ from 'jquery';
  * Files can be found inside the "node_modules/foundation-sites/dist/js/plugins" directory.
  */
 import 'foundation-sites/dist/js/plugins/foundation.core';
+import 'foundation-sites/dist/js/plugins/foundation.smoothScroll';
 import 'foundation-sites/dist/js/plugins/foundation.dropdownMenu';
 import 'foundation-sites/dist/js/plugins/foundation.responsiveToggle';
 

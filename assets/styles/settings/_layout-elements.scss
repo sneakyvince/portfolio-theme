@@ -1,0 +1,34 @@
+// Grid settings
+$main-sm-columns                      : 12;
+$sidebar-sm-columns                   : 4;
+$header-height                        : 215px;
+$main-padding                         : 400px;
+$grid-padding-gutters                 : 50px;
+$grid-margin-gutters                  : 50px;
+$grid-container-padding               : (
+	small: 40px,
+	medium: 80px,
+);
+
+$grid-column-gutter                   : (
+	small: 40px,
+	medium: 80px,
+);
+
+// Top bar
+$topbar-padding                       : 0;
+$topbar-background                    : none;
+$topbar-submenu-background            : none;
+$topbar-title-spacing                 : 90;
+$titlebar-padding                     : 0;
+$titlebar-background                  : none;
+
+// Dropdown
+$dropdownmenu-arrows                  : false;
+$dropdownmenu-border                  : none;
+$dropdownmenu-min-width               : 250px;
+$dropdownmenu-padding                 : rem-calc(10px);
+$dropdownmenu-submenu-background      : $main-background;
+$dropdownmenu-submenu-padding         : 1000;
+$dropdown-menu-item-color-active      : inherit;
+$dropdown-menu-item-background-active : rgba($surface-border-color, 0.8);
