@@ -1,25 +1,22 @@
 <?php use IndiciaInteractiv\Theme\Titles; ?>
 
-<header id="content-header" class="single-header">
+<header id="content-header" class="content-header single-header">
 	<div class="grid-container">
 
+		<div class="grid-x">
+			<div class="cell small-12 medium-6 large-12">
+				<?php get_template_part( 'templates/entry-meta' ); ?>
 
-		<!-- /.single-header__background-image -->
-
-
-		<div class="single-header__inner">
-			<div class="single-header__background-image">
-				<?= get_the_post_thumbnail( get_the_ID(), 'large' ) ?>
+				<h1 class="content-header__title"><?= Titles\title(); ?></h1>
 			</div>
 
-			<div class="single-header__overlay"></div>
-			<!-- /.single-header__overlay -->
-
-			<div class="single-header__title">
-				<h1><?= Titles\title(); ?></h1>
+			<div class="cell small-12 medium-6 large-12">
+				<?= get_the_post_thumbnail( get_the_ID(), 'large', [ 'class' => 'content-header__image' ] ) ?>
 			</div>
-			<!-- /.single-header__title -->
 
+			<div class="cell small-12 medium-6 large-12">
+				<div class="content-header__line"></div>
+			</div>
 		</div>
 	</div>
 </header>

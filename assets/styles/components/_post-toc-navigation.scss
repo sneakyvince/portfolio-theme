@@ -1,0 +1,14 @@
+.post-toc-navigation {
+	//margin-top: rem-calc(70px);
+	border        : 1px solid $surface-border-color;
+	border-radius : rem-calc(15px);
+
+	&__title {
+		padding       : rem-calc(15px);
+		border-bottom : 1px solid $surface-border-color;
+	}
+
+	&__body {
+		//padding : rem-calc(15px);
+	}
+}

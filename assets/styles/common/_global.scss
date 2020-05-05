@@ -25,11 +25,13 @@ body {
 }
 
 ::selection {
-	background : #79B2F3;
+	background  : #79B2F3;
+	text-shadow : none;
 }
 
 ::-moz-selection {
-	background : #144B8C;
+	background  : #144B8C;
+	text-shadow : none;
 }
 
 .card {
@@ -49,12 +51,21 @@ code {
 }
 
 a {
+	padding             : rem-calc(2px 0);
 	text-decoration     : none;
 	background-image    : linear-gradient(currentColor, currentColor);
 	background-position : 0 100%;
 	background-repeat   : no-repeat;
 	background-size     : 0 1px;
+	text-shadow         : 2px 2px $main-background,
+	2px -2px $main-background,
+	-2px 2px $main-background,
+	-2px -2px $main-background;
 	transition          : background-size .15s;
+}
+
+.menu a {
+	@include disable-anchor-styles;
 }
 
 a:hover, a:focus {

@@ -57,3 +57,12 @@ class Foundation_Nav_Menu extends \Walker_Nav_Menu {
 		$output .= "\n$indent<ul class=\"menu\">\n";
 	}
 }
+
+// Allow SVG uploading
+function filter__upload_mimes( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+
+add_filter( 'upload_mimes', __NAMESPACE__ . '\\filter__upload_mimes' );

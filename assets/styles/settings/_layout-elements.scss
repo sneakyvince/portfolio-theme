@@ -3,11 +3,14 @@ $main-sm-columns                      : 12;
 $sidebar-sm-columns                   : 4;
 $header-height                        : 215px;
 $main-padding                         : 400px;
+
+$grid-container                       : 1400px;
 $grid-padding-gutters                 : 50px;
 $grid-margin-gutters                  : 50px;
 $grid-container-padding               : (
-	small: 40px,
-	medium: 80px,
+	small: 64px,
+	medium: 96px,
+	large: 128px
 );
 
 $grid-column-gutter                   : (

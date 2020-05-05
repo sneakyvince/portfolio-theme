@@ -1,29 +1,3 @@
-<?php
-/**
- * Parses dynamic blocks out of `post_content` and re-renders them.
- *
- * @param string $content Post content.
- *
- * @return string Updated post content.
- * @since 5.0.0
- * @global WP_Post $post The post to edit.
- *
- */
-$post = get_post();
-
-if ( has_blocks( $post->post_content ) ) {
-	$blocks = parse_blocks( $post->post_content );
-
-//	wp_die(var_dump( $blocks ));
-
-	foreach ( $blocks as $block ) {
-		if ( $blocks[0]['blockName'] === 'core/heading' ) {
-
-		}
-	}
-}
-
-?>
 <?php get_template_part( 'templates/single', 'header' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
@@ -31,30 +5,14 @@ if ( has_blocks( $post->post_content ) ) {
 		<article <?php post_class(); ?>>
 			<div class="grid-container">
 				<div class="grid-x grid-margin-x">
-					<div class="cell small-12">
-						<?php get_template_part( 'templates/entry-meta' ); ?>
-					</div>
-
-					<div id="entry-content" class="entry-content cell small-12 large-8">
+					<div id="entry-content" class="entry-content cell small-12 large-9">
 						<?php the_content(); ?>
 					</div>
 
-					<div class="entry-content cell small-12 large-4" data-sticky-container>
+					<div class="entry-content cell small-12 large-3" data-sticky-container>
 						<div class="sticky" data-sticky data-anchor="entry-content" data-margin-top="0">
-							<div>
-								<?php
-								// Get post content to extract slider shortcode.
-								//						$blocks = parse_blocks( get_the_content() );
-								//						foreach ( $blocks as $block ) {
-								//							if ( 'soliloquy/soliloquywp' === $block['blockName'] ) {
-								//								echo 'bruh 😤';
-								//								break;
-								//							}
-								//						}
-								// Display the title.?>
-							</div>
+							<?php get_template_part( 'templates/post-toc-navigation' ); ?>
 						</div>
-
 					</div>
 
 					<footer class="cell small-12">
@@ -69,8 +27,8 @@ if ( has_blocks( $post->post_content ) ) {
 	</section>
 
 	<section>
-		<div class="grid-container">
-			<?php get_template_part( 'templates/navigation' ); ?>
-		</div><!-- /.grid-container -->
+		<!--		<div class="grid-container">-->
+		<!--			--><?php //get_template_part( 'templates/navigation' ); ?>
+		<!--		</div>-->
 	</section>
 <?php endwhile; ?>
