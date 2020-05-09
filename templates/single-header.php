@@ -11,7 +11,7 @@
 			</div>
 
 			<div class="cell small-12 medium-6 large-12">
-				<?= get_the_post_thumbnail( get_the_ID(), 'large', [ 'class' => 'content-header__image' ] ) ?>
+				<?= get_the_post_thumbnail( get_the_ID(), 'xlarge', [ 'class' => 'content-header__image' ] ) ?>
 			</div>
 
 			<div class="cell small-12 medium-6 large-12">

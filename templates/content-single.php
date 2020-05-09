@@ -10,8 +10,8 @@
 					</div>
 
 					<div class="entry-content cell small-12 large-3" data-sticky-container>
-						<div class="sticky" data-sticky data-anchor="entry-content" data-margin-top="0">
-							<?php get_template_part( 'templates/post-toc-navigation' ); ?>
+						<div class="sticky" id="sticky" data-sticky data-margin-top="6.25" data-anchor="entry-content">
+							<?php get_template_part( 'templates/content', 'magellan' ); ?>
 						</div>
 					</div>
 

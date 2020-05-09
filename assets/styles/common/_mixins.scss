@@ -55,12 +55,12 @@
 	color      : inherit;
 	background : none;
 
-	&:hover, &:focus {
+	&:hover, &:active {
 		color           : inherit;
 		text-decoration : none;
 	}
 
-	&:active {
+	&:focus {
 		color : inherit;
 	}
 }

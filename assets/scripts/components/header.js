@@ -2,7 +2,8 @@ import gsap from 'gsap'
 
 const header = document.getElementById( 'site-header' );
 const contentHeader = document.getElementById( 'content-header' );
-contentHeader.style.marginTop = header.offsetHeight + 'px';
+const wrapContainer = document.getElementById( 'wrap-container' );
+wrapContainer.style.marginTop = header.offsetHeight + 'px';
 
 // Show the navbar on hover
 let hover = false;

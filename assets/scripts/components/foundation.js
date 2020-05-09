@@ -6,6 +6,7 @@ import $ from 'jquery';
  */
 import 'foundation-sites/dist/js/plugins/foundation.core';
 import 'foundation-sites/dist/js/plugins/foundation.smoothScroll';
+import 'foundation-sites/dist/js/plugins/foundation.magellan';
 import 'foundation-sites/dist/js/plugins/foundation.dropdownMenu';
 import 'foundation-sites/dist/js/plugins/foundation.responsiveToggle';
 

@@ -1,0 +1,48 @@
+a {
+	padding             : rem-calc(2px 0);
+	text-decoration     : none;
+	background-image    : linear-gradient(currentColor, currentColor);
+	background-position : 0 100%;
+	background-repeat   : no-repeat;
+	background-size     : 0 1px;
+	//text-shadow         : 2px 2px $main-background,
+	//2px -2px $main-background,
+	//-2px 2px $main-background,
+	//-2px -2px $main-background;
+	transition          : background-size .15s ease-out;
+
+	&:hover, &:active {
+		background-size : 100% 1px;
+	}
+
+	&:focus {
+		background-size     : 80% 1px;
+		background-position : 50% 100%;
+	}
+}
+
+//a {
+//	color                        : #FF7800;
+//	box-shadow                   : inset 0 -1px 0 currentColor, 4px 0 0 transparent, -4px 0 0 transparent;
+//	box-decoration-break         : clone;
+//	padding-bottom               : 2px;
+//	padding-top                  : 2px;
+//	text-decoration              : none;
+//	-webkit-text-decoration-skip : objects;
+//	transition                   : box-shadow .2s ease-out 0s, background .2s ease-out 0s;
+//
+//	&:hover, &:active {
+//		box-shadow    : inset 0 -1px 0 transparent;
+//		outline-width : 0;
+//
+//	}
+//
+//	&:focus {
+//		border-radius: 5px;
+//		background         : #FF7800;
+//		-webkit-box-shadow : inset 0 -1px 0 #FF7800, 4px 0 0 #FF7800, -4px 0 0 #FF7800;
+//		box-shadow         : inset 0 -1px 0 #FF7800, 4px 0 0 #FF7800, -4px 0 0 #FF7800;
+//		color              : #FFF;
+//		outline-width      : 0;
+//	}
+//}
