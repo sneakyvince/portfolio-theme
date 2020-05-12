@@ -25,12 +25,12 @@ body {
 }
 
 ::selection {
-	background  : #79B2F3;
+	background  : #4152FA;
 	text-shadow : none;
 }
 
 ::-moz-selection {
-	background  : #144B8C;
+	background  : $primary-color;
 	text-shadow : none;
 }
 

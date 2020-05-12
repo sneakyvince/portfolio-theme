@@ -1,7 +1,7 @@
 <?php get_template_part( 'templates/single', 'header' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<section class="section-wrap">
+	<section class="section-wrap--content">
 		<article <?php post_class(); ?>>
 			<div class="grid-container">
 				<div class="grid-x grid-margin-x">

@@ -5,13 +5,9 @@ a {
 	background-position : 0 100%;
 	background-repeat   : no-repeat;
 	background-size     : 0 1px;
-	//text-shadow         : 2px 2px $main-background,
-	//2px -2px $main-background,
-	//-2px 2px $main-background,
-	//-2px -2px $main-background;
 	transition          : background-size .15s ease-out;
 
-	&:hover, &:active {
+	&:hover {
 		background-size : 100% 1px;
 	}
 

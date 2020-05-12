@@ -83,6 +83,8 @@ function display_sidebar() {
  * Theme assets
  */
 function action__wp_enqueue_scripts() {
+	wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap', false, null );
+	// wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Sans:wght@700&display=swap', false, null);
 	wp_enqueue_style( 'indicia_theme_css', Assets\asset_path( '/styles/main.css' ), false, null );
 
 	if ( is_single() && comments_open() && get_option( 'thread_comments' ) ) {

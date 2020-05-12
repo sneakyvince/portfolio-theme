@@ -3,11 +3,9 @@ $black                : #18191A;
 $white                : #FFF;
 
 // Panel colors
-$main-background      : $black;
-$main-background      : #242526;
 $main-background      : #232327;
-$surface-background   : #242526;
-$surface-border-color : #38393A;
+$surface-background   : #39393D;
+$surface-border-color : #39393D;
 
 // Text colors
 $primary-text         : #E4E6EB;
@@ -20,33 +18,24 @@ $shadow-1             : rgba(0, 0, 0, 0.1);
 $shadow-2             : rgba(0, 0, 0, 0.2);
 
 // Colors
-$primary-color        : #F5E049;
+$primary-color        : #4053FA;
 $secondary-color      : #18BFBB;
-$chambray             : #334689;
-$astral               : #3385AA;
-$bluegreen            : #0F98BE;
-$tiffanyblue          : #16BABC;
 
-// Gradients
-$gradient-1           : (
-	first : $primary-color,
-	second : $secondary-color,
-);
-
-$gradient-2           : (
-	first : $chambray,
-	second : $astral,
-);
-
-$gradient-3           : (
-	first : $bluegreen,
-	second : $tiffanyblue,
-);
+$orange               : #E79D3F;
+$red                  : #E06A63;
+$pink                 : #E0719E;
+$light-pink           : #EEBED3;
+$yellow               : #F6E049;
+$perano               : #AAC6FC;
+$green                : #CEDD71;
+$mint                 : #A7D99A;
+$bermuda              : #7ED6C2;
 
 $foundation-palette   : (
 	primary : $primary-color,
 	secondary : $secondary-color,
-	success : #60C165,
-	warning : #FFC353,
-	alert : #FC6076,
+	//success : $green,
+	success : $mint,
+	warning : $orange,
+	alert : $red,
 );

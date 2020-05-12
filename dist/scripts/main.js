@@ -113,17 +113,27 @@
 /******/ 						if(chunk) {
 /******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 /******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
-/******/ 							error.name = 'ChunkLoadError';
-/******/ 							error.type = errorType;
-/******/ 							error.request = realSrc;
-/******/ 							chunk[1](error);
-/******/ 						}
-/******/ 						installedChunks[chunkId] = undefined;
-/******/ 					}
-/******/ 				};
-/******/ 				var timeout = setTimeout(function(){
 /******/
+							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+							/******/
+							error.name = 'ChunkLoadError';
+							/******/
+							error.type = errorType;
+							/******/
+							error.request = realSrc;
+							/******/
+							chunk[ 1 ]( error );
+							/******/
+						}
+						/******/
+						installedChunks[ chunkId ] = undefined;
+						/******/
+					}
+					/******/
+				};
+				/******/
+				var timeout = setTimeout( function () {
+					/******/
 					onScriptComplete( { type : 'timeout', target : script } );
 					/******/
 				}, 120000 );
@@ -2518,11 +2528,11 @@ module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/fo
 /***/ }),
 
 /***/ "jquery":
-/*!********************************************************************************************!*\
-  !*** external {"root":["jQuery"],"amd":"jquery","commonjs":"jquery","commonjs2":"jquery"} ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+		/*!********************************************************************************************!*\
+		 !*** external {"root":["jQuery"],"amd":"jquery","commonjs":"jquery","commonjs2":"jquery"} ***!
+		 \********************************************************************************************/
+		/*! no static exports found */
+		/***/ ( function ( module, exports ) {
 
 			module.exports = __WEBPACK_EXTERNAL_MODULE_jquery__;
 
@@ -3559,13 +3569,15 @@ module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/fo
 
 			( function webpackUniversalModuleDefinition( root, factory ) {
 				if ( true )
-		module.exports = factory(__webpack_require__(/*! ./foundation.core */ "./node_modules/foundation-sites/dist/js/plugins/foundation.core.js"), __webpack_require__(/*! ./foundation.util.mediaQuery */ "./node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js"), __webpack_require__(/*! ./foundation.util.motion */ "./node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js"), __webpack_require__(/*! jquery */ "jquery"));
-	else {}
-})(window, function(__WEBPACK_EXTERNAL_MODULE__foundation_core__, __WEBPACK_EXTERNAL_MODULE__foundation_util_mediaQuery__, __WEBPACK_EXTERNAL_MODULE__foundation_util_motion__, __WEBPACK_EXTERNAL_MODULE_jquery__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
+					module.exports = factory( __webpack_require__(/*! ./foundation.core */ "./node_modules/foundation-sites/dist/js/plugins/foundation.core.js" ), __webpack_require__(/*! ./foundation.util.mediaQuery */ "./node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js" ), __webpack_require__(/*! ./foundation.util.motion */ "./node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js" ), __webpack_require__(/*! jquery */ "jquery" ) );
+				else {
+				}
+			} )( window, function ( __WEBPACK_EXTERNAL_MODULE__foundation_core__, __WEBPACK_EXTERNAL_MODULE__foundation_util_mediaQuery__, __WEBPACK_EXTERNAL_MODULE__foundation_util_motion__, __WEBPACK_EXTERNAL_MODULE_jquery__ ) {
+				return /******/ ( function ( modules ) { // webpackBootstrap
+					/******/ 	// The module cache
+					/******/
+					var installedModules = {};
+					/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -3920,33 +3932,33 @@ ResponsiveToggle.defaults = {
 
 /***/ }),
 
-/***/ 13:
-/*!*****************************************************************!*\
- !*** multi ./js/entries/plugins/foundation.responsiveToggle.js ***!
- \*****************************************************************/
-		/*! no static exports found */
-		/***/ ( function ( module, exports, __webpack_require__ ) {
+						/***/ 13 :
+						/*!*****************************************************************!*\
+						 !*** multi ./js/entries/plugins/foundation.responsiveToggle.js ***!
+						 \*****************************************************************/
+						/*! no static exports found */
+						/***/ ( function ( module, exports, __webpack_require__ ) {
 
-			module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.responsiveToggle.js */"./js/entries/plugins/foundation.responsiveToggle.js" );
+							module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.responsiveToggle.js */"./js/entries/plugins/foundation.responsiveToggle.js" );
 
 
-			/***/
-		} ),
+							/***/
+						} ),
 
-		/***/ "jquery" :
-		/*!********************************************************************************************!*\
-		 !*** external {"root":["jQuery"],"amd":"jquery","commonjs":"jquery","commonjs2":"jquery"} ***!
-		 \********************************************************************************************/
-		/*! no static exports found */
-		/***/ ( function ( module, exports ) {
+						/***/ "jquery" :
+						/*!********************************************************************************************!*\
+						 !*** external {"root":["jQuery"],"amd":"jquery","commonjs":"jquery","commonjs2":"jquery"} ***!
+						 \********************************************************************************************/
+						/*! no static exports found */
+						/***/ ( function ( module, exports ) {
 
-			module.exports = __WEBPACK_EXTERNAL_MODULE_jquery__;
+							module.exports = __WEBPACK_EXTERNAL_MODULE_jquery__;
 
-			/***/
-		} )
+							/***/
+						} )
 
-		/******/
-	} );
+						/******/
+					} );
 			} );
 //# sourceMappingURL=foundation.responsiveToggle.js.map
 
@@ -4502,16 +4514,20 @@ ResponsiveToggle.defaults = {
 						return module.exports;
 						/******/
 					}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
+
+					/******/
+					/******/
+					/******/ 	// expose the modules object (__webpack_modules__)
+					/******/
+					__webpack_require__.m = modules;
+					/******/
+					/******/ 	// expose the module cache
+					/******/
+					__webpack_require__.c = installedModules;
+					/******/
+					/******/ 	// define getter function for harmony exports
+					/******/
+					__webpack_require__.d = function ( exports, name, getter ) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
 /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
@@ -15555,15 +15571,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	      return currentElement;
 	    },
 
-	    // overwrites ignored keys with provided array
-	    ignoreKeys: function ignoreKeys(arr) {
-	      ignoreMap = arr;
-	    },
+		  // overwrites ignored keys with provided array
+		  ignoreKeys : function ignoreKeys( arr ) {
+			  ignoreMap = arr;
+		  },
 
-	    // overwrites specific char keys to update on
-	    specificKeys: function specificKeys(arr) {
-	      specificMap = arr;
-	    },
+		  // overwrites specific char keys to update on
+		  specificKeys : function specificKeys( arr ) {
+			  specificMap = arr;
+		  },
 
 		  // attach functions to input and intent "events"
 		  // funct: function to fire on change

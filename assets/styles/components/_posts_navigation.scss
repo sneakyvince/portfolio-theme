@@ -3,28 +3,6 @@
 	justify-content : center;
 	margin-top      : rem-calc(80px);
 
-	.nav-next {
-		& a::after {
-			@include pseudo-icon;
-			background-position-x : rem-calc(3px);
-			width                 : rem-calc(25px);
-			height                : rem-calc(25px);
-			margin-left           : rem-calc(5px);
-			background-image      : url('../icons/arrow-right-250-white.svg');
-		}
-	}
-
-	.nav-previous {
-		& a::before {
-			@include pseudo-icon;
-			background-position-x : rem-calc(-3px);
-			width                 : rem-calc(25px);
-			height                : rem-calc(25px);
-			margin-right          : rem-calc(5px);
-			background-image      : url('../icons/arrow-left-250-white.svg');
-		}
-	}
-
 	.nav-links {
 		display : flex;
 
@@ -36,39 +14,44 @@
 			}
 		}
 
-		div[class^='nav-'] {
-			position      : relative;
-			@include background-gradient($gradient-2);
-			border-radius : rem-calc(900px);
+	}
 
-			&::before {
-				@include pseudo-full-wh;
-				opacity       : 0;
-				border-radius : rem-calc(900px);
-				@include background-gradient($gradient-1, $darken : true);
-				@include transition;
-			}
+	.nav-next a::after {
+		@include pseudo-icon;
+		background-position-x : rem-calc(3px);
+		width                 : rem-calc(25px);
+		height                : rem-calc(25px);
+		margin-left           : rem-calc(5px);
+		background-image      : url('../icons/arrow-right-250-white.svg');
 
-			&:hover {
-				&::before {
-					opacity : 1;
-				}
-			}
+	}
 
-			& a {
-				position    : relative;
-				z-index     : 2;
-				@include disable-anchor-styles;
-				display     : flex;
-				padding     : rem-calc(10px 35px);
-				color       : $white;
-				font-weight : $global-weight-semi-bold;
-				font-size   : rem-calc(20px);
+	.nav-previous a::before {
+		@include pseudo-icon;
+		background-position-x : rem-calc(-3px);
+		width                 : rem-calc(25px);
+		height                : rem-calc(25px);
+		margin-right          : rem-calc(5px);
+		background-image      : url('../icons/arrow-left-250-white.svg');
+	}
 
-				&:hover {
-					color : $white
-				}
-			}
+	.nav-next a, .nav-previous a {
+		@include disable-anchor-styles;
+		display       : flex;
+		padding       : rem-calc(10px 35px);
+		font-weight   : $global-weight-semi-bold;
+		font-size     : rem-calc(20px);
+		border-radius : rem-calc(50%);
+		background    : $primary-color;
+		transition    : background .15s ease-out, color .15s ease-out;
+
+		&:hover {
+			background : $surface-background;
+
+		}
+
+		&:focus {
+			background : transparent;
 		}
 	}
 }

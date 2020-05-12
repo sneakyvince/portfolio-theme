@@ -1,5 +1,4 @@
 .magellan {
-	//margin-top: rem-calc(70px);
 	border        : 1px solid $surface-border-color;
 	border-radius : rem-calc(15px);
 	overflow      : hidden;
@@ -11,28 +10,18 @@
 	}
 
 	&__body {
-		//padding : rem-calc(15px);
-
-	}
-
-	&__item:last-child a {
-		border-radius : rem-calc(0 0 15px 15px);
-
 	}
 
 	&__item a {
-		border     : 1px solid transparent;
-		transition : all .15s ease-out;
+		border : 1px solid transparent;
+		@include transition($prop : background);
 
-		&:hover, &:active {
-			color  : #4053FA;
-			//background: rgba( #4053FA, 0.1 );
-			border : 1px solid #4053FA;
+		&:hover {
+			background : $surface-background;
 		}
 
-		&.is-active, &:focus {
-			color      : white;
-			background : #4053FA;
+		&.is-active {
+			background : $primary-color;
 		}
 	}
 }
