@@ -1,4 +1,6 @@
 .footer {
+	margin-top : rem-calc(200px);
+
 	&__nav {
 		border-top  : 1px solid $surface-border-color;
 		padding-top : rem-calc(50px);

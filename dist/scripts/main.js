@@ -103,17 +103,26 @@
 /******/ 				script.src = jsonpScriptSrc(chunkId);
 /******/
 /******/ 				// create error before stack unwound to get useful stacktrace later
-/******/ 				var error = new Error();
-/******/ 				onScriptComplete = function (event) {
-/******/ 					// avoid mem leaks in IE.
-/******/ 					script.onerror = script.onload = null;
-/******/ 					clearTimeout(timeout);
-/******/ 					var chunk = installedChunks[chunkId];
-/******/ 					if(chunk !== 0) {
-/******/ 						if(chunk) {
-/******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
-/******/ 							var realSrc = event && event.target && event.target.src;
 /******/
+				var error = new Error();
+				/******/
+				onScriptComplete = function ( event ) {
+					/******/ 					// avoid mem leaks in IE.
+					/******/
+					script.onerror = script.onload = null;
+					/******/
+					clearTimeout( timeout );
+					/******/
+					var chunk = installedChunks[ chunkId ];
+					/******/
+					if ( chunk !== 0 ) {
+						/******/
+						if ( chunk ) {
+							/******/
+							var errorType = event && ( event.type === 'load' ? 'missing' : event.type );
+							/******/
+							var realSrc = event && event.target && event.target.src;
+							/******/
 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
 							/******/
 							error.name = 'ChunkLoadError';
@@ -2527,7 +2536,7 @@ module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/fo
 
 /***/ }),
 
-/***/ "jquery":
+/***/ "jquery" :
 		/*!********************************************************************************************!*\
 		 !*** external {"root":["jQuery"],"amd":"jquery","commonjs":"jquery","commonjs2":"jquery"} ***!
 		 \********************************************************************************************/
@@ -3578,16 +3587,21 @@ module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/fo
 					/******/
 					var installedModules = {};
 					/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
+					/******/ 	// The require function
+					/******/
+					function __webpack_require__( moduleId ) {
+						/******/
+						/******/ 		// Check if module is in cache
+						/******/
+						if ( installedModules[ moduleId ] ) {
+							/******/
+							return installedModules[ moduleId ].exports;
+							/******/
+						}
+						/******/ 		// Create a new module (and put it into the cache)
+						/******/
+						var module = installedModules[ moduleId ] = {
+							/******/            i : moduleId,
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
@@ -3926,11 +3940,12 @@ ResponsiveToggle.defaults = {
    * @type {boolean}
    * @default false
    */
-  animate: false
+  animate : false
 };
 
 
-/***/ }),
+							/***/
+						} ),
 
 						/***/ 13 :
 						/*!*****************************************************************!*\
@@ -4528,16 +4543,24 @@ ResponsiveToggle.defaults = {
 					/******/ 	// define getter function for harmony exports
 					/******/
 					__webpack_require__.d = function ( exports, name, getter ) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
+						/******/
+						if ( ! __webpack_require__.o( exports, name ) ) {
+							/******/
+							Object.defineProperty( exports, name, { enumerable : true, get : getter } );
+							/******/
+						}
+						/******/
+					};
+					/******/
+					/******/ 	// define __esModule on exports
+					/******/
+					__webpack_require__.r = function ( exports ) {
+						/******/
+						if ( typeof Symbol !== 'undefined' && Symbol.toStringTag ) {
+							/******/
+							Object.defineProperty( exports, Symbol.toStringTag, { value : 'Module' } );
+							/******/
+						}
 /******/ 		Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 	};
 /******/
@@ -15561,15 +15584,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // returns string: the current input type
 	    // opt: 'intent'|'input'
 	    // 'input' (default): returns the same value as the `data-whatinput` attribute
-	    // 'intent': includes `data-whatintent` value if it's different than `data-whatinput`
-	    ask: function ask(opt) {
-	      return opt === 'intent' ? currentIntent : currentInput;
-	    },
+		  // 'intent': includes `data-whatintent` value if it's different than `data-whatinput`
+		  ask : function ask( opt ) {
+			  return opt === 'intent' ? currentIntent : currentInput;
+		  },
 
-	    // returns string: the currently focused element or null
-	    element: function element() {
-	      return currentElement;
-	    },
+		  // returns string: the currently focused element or null
+		  element : function element() {
+			  return currentElement;
+		  },
 
 		  // overwrites ignored keys with provided array
 		  ignoreKeys : function ignoreKeys( arr ) {

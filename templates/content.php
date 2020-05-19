@@ -6,7 +6,6 @@ $thumb    = get_the_post_thumbnail();
 ?>
 
 <a href="<?= get_permalink(); ?>" class="item cell small-12 medium-6 large-4" <?php post_class(); ?>>
-
 	<div class="item__inner">
 		<article class="article">
 			<?php if ( $thumb ) : ?>
@@ -42,5 +41,4 @@ $thumb    = get_the_post_thumbnail();
 			</footer>
 		</article>
 	</div>
-
 </a>

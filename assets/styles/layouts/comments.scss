@@ -1,0 +1,8 @@
+.comments {
+	margin : rem-calc(50px 0);
+
+	&__inner {
+		padding-top : rem-calc(50px);
+		border-top  : 1px solid $surface-border-color;
+	}
+}

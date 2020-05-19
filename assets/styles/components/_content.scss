@@ -2,10 +2,9 @@
 	@include disable-anchor-styles;
 
 	&__inner {
-		display        : flex;
-		flex-direction : column;
 		height         : 100%;
-		align-items    : stretch;
+		padding-bottom : rem-calc(25px);
+		border-bottom  : 1px solid $surface-border-color;
 	}
 }
 
@@ -22,14 +21,14 @@
 	@include transition;
 
 	&__image {
-		width  : 100%;
-		height : rem-calc(200px);
+		width         : 100%;
+		height        : rem-calc(200px);
+		margin-bottom : rem-calc(20px);
 		@include object-fit(cover);
-
 	}
 
 	&__header {
-		margin-top : rem-calc(20px);
+		flex-grow : 1;
 	}
 
 	&__category {
@@ -51,7 +50,6 @@
 	}
 
 	&__read-more {
-
 		display       : inline-block;
 		background    : $surface-background;
 		margin-top    : rem-calc(30px);
@@ -61,7 +59,6 @@
 	}
 
 	&:hover {
-		background : #1E1E21;
 		background : #1C1C1F;
 
 		//.article__category {

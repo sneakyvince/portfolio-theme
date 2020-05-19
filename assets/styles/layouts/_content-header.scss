@@ -1,12 +1,7 @@
 .content-header {
-	position    : relative;
-	overflow    : hidden;
-	padding-top : rem-calc(150px);
-
-
-	&__inner {
-		padding : rem-calc(175px 0 225px 0);
-	}
+	position : relative;
+	overflow : hidden;
+	margin   : rem-calc(150px 0 50px);
 
 	&__line {
 		padding-bottom : 100px;
