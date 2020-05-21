@@ -93,17 +93,24 @@
 /******/
 /******/ 				// start chunk loading
 /******/ 				var script = document.createElement('script');
-/******/ 				var onScriptComplete;
 /******/
-/******/ 				script.charset = 'utf-8';
-/******/ 				script.timeout = 120;
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				script.src = jsonpScriptSrc(chunkId);
-/******/
-/******/ 				// create error before stack unwound to get useful stacktrace later
-/******/
+				var onScriptComplete;
+				/******/
+				/******/
+				script.charset = 'utf-8';
+				/******/
+				script.timeout = 120;
+				/******/
+				if ( __webpack_require__.nc ) {
+					/******/
+					script.setAttribute( 'nonce', __webpack_require__.nc );
+					/******/
+				}
+				/******/
+				script.src = jsonpScriptSrc( chunkId );
+				/******/
+				/******/ 				// create error before stack unwound to get useful stacktrace later
+				/******/
 				var error = new Error();
 				/******/
 				onScriptComplete = function ( event ) {
@@ -2526,17 +2533,18 @@ DropdownMenu.defaults = {
 
 /***/ 5:
 /*!*************************************************************!*\
-  !*** multi ./js/entries/plugins/foundation.dropdownMenu.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+ !*** multi ./js/entries/plugins/foundation.dropdownMenu.js ***!
+ \*************************************************************/
+		/*! no static exports found */
+		/***/ ( function ( module, exports, __webpack_require__ ) {
 
-module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.dropdownMenu.js */"./js/entries/plugins/foundation.dropdownMenu.js");
+			module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/foundation-sites/js/entries/plugins/foundation.dropdownMenu.js */"./js/entries/plugins/foundation.dropdownMenu.js" );
 
 
-/***/ }),
+			/***/
+		} ),
 
-/***/ "jquery" :
+		/***/ "jquery" :
 		/*!********************************************************************************************!*\
 		 !*** external {"root":["jQuery"],"amd":"jquery","commonjs":"jquery","commonjs2":"jquery"} ***!
 		 \********************************************************************************************/
@@ -3601,17 +3609,20 @@ module.exports = __webpack_require__(/*! /Volumes/Data/Development/Foundation/fo
 						/******/ 		// Create a new module (and put it into the cache)
 						/******/
 						var module = installedModules[ moduleId ] = {
-							/******/            i : moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
+							/******/            i       : moduleId,
+							/******/            l       : false,
+							/******/            exports : {}
+							/******/
+						};
+						/******/
+						/******/ 		// Execute the module function
+						/******/
+						modules[ moduleId ].call( module.exports, module, module.exports, __webpack_require__ );
+						/******/
+						/******/ 		// Flag the module as loaded
+						/******/
+						module.l = true;
+						/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
@@ -3934,13 +3945,13 @@ ResponsiveToggle.defaults = {
    */
   hideFor: 'medium',
 
-  /**
-   * To decide if the toggle should be animated or not.
-   * @option
-   * @type {boolean}
-   * @default false
-   */
-  animate : false
+	/**
+	 * To decide if the toggle should be animated or not.
+	 * @option
+	 * @type {boolean}
+	 * @default false
+	 */
+	animate : false
 };
 
 
@@ -4561,16 +4572,20 @@ ResponsiveToggle.defaults = {
 							Object.defineProperty( exports, Symbol.toStringTag, { value : 'Module' } );
 							/******/
 						}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
+						/******/
+						Object.defineProperty( exports, '__esModule', { value : true } );
+						/******/
+					};
+					/******/
+					/******/ 	// create a fake namespace object
+					/******/ 	// mode & 1: value is a module id, require it
+					/******/ 	// mode & 2: merge all properties of value into the ns
+					/******/ 	// mode & 4: return value when already ns object
+					/******/ 	// mode & 8|1: behave like require
+					/******/
+					__webpack_require__.t = function ( value, mode ) {
+						/******/
+						if ( mode & 1 ) value = __webpack_require__( value );
 /******/ 		if(mode & 8) return value;
 /******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
 /******/ 		var ns = Object.create(null);
@@ -15581,9 +15596,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	   */
 
 	  return {
-	    // returns string: the current input type
-	    // opt: 'intent'|'input'
-	    // 'input' (default): returns the same value as the `data-whatinput` attribute
+		  // returns string: the current input type
+		  // opt: 'intent'|'input'
+		  // 'input' (default): returns the same value as the `data-whatinput` attribute
 		  // 'intent': includes `data-whatintent` value if it's different than `data-whatinput`
 		  ask : function ask( opt ) {
 			  return opt === 'intent' ? currentIntent : currentInput;

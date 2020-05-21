@@ -9,8 +9,16 @@
 
 	.is-dropdown-submenu-parent {
 		&.is-active {
+			&::after {
+				position  : absolute;
+				bottom    : -25px;
+				left      : 50%;
+				transform : translateX(-50%);
+				@include css-triangle(20px, $surface-border-color, up);
+			}
+
 			& > a::after {
-				transform : rotate(180deg) translateY(50%);
+				transform : rotateX(180deg) translateY(50%);
 			}
 		}
 
@@ -36,16 +44,23 @@
 	}
 
 	.submenu {
+		margin-top    : rem-calc(10px);
 		border-radius : rem-calc(20px);
 		z-index       : 99;
+		overflow      : hidden;
 		//padding: rem-calc(10px);
+
+		a {
+			border-radius : 0;
+		}
 
 		& .menu-item a {
 			@include transition;
 
-			&:hover {
-				background : rgba($surface-border-color, 0.8);
-			}
+			@include button-hocus;
+			//&:hover {
+			//	background : rgba($surface-border-color, 0.8);
+			//}
 		}
 	}
 }

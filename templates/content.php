@@ -5,40 +5,40 @@ $excerpt  = get_the_excerpt();
 $thumb    = get_the_post_thumbnail();
 ?>
 
-<a href="<?= get_permalink(); ?>" class="item cell small-12 medium-6 large-4" <?php post_class(); ?>>
-	<div class="item__inner">
-		<article class="article">
-			<?php if ( $thumb ) : ?>
-				<?php the_post_thumbnail( 'small', [ 'class' => 'article__image' ] ); ?>
-			<?php endif ?>
+<a href="<?= get_permalink(); ?>" <?php post_class( 'article__link' ); ?>>
+	<article class="article">
+		<?php if ( $thumb ) : ?>
+			<?php the_post_thumbnail( 'small', [ 'class' => 'article__image' ] ); ?>
+		<?php endif ?>
 
-			<header class="article__header">
-				<?php if ( $category ) : ?>
-					<span class="article__category">
+		<header class="article__header">
+			<?php if ( $category ) : ?>
+				<span class="article__category">
 					<?= $category[0]->name; ?>
 				</span>
-				<?php endif; ?>
+			<?php endif; ?>
 
-				<time class="updated" datetime="<?= get_post_time( 'c', true ); ?>"><?= get_the_date( 'j F' ); ?></time>
+			<time class="updated" datetime="<?= get_post_time( 'c', true ); ?>"><?= get_the_date( 'j F' ); ?></time>
 
-				<?php if ( $title ) : ?>
-					<h3 class="article__title">
-						<?= $title; ?>
-					</h3>
-				<?php endif; ?>
+			<?php if ( $title ) : ?>
+				<h3 class="article__title">
+					<?= $title; ?>
+				</h3>
+			<?php endif; ?>
 
-				<?php if ( $excerpt ) : ?>
-					<p class="article__excerpt">
-						<?= wp_trim_words( strip_tags( $excerpt ), 20 ); ?>
-					</p>
-				<?php endif; ?>
-			</header>
+			<?php if ( $excerpt ) : ?>
+				<p class="article__excerpt">
+					<?= wp_trim_words( strip_tags( $excerpt ), 20 ); ?>
+				</p>
+			<?php endif; ?>
+		</header>
 
-			<footer class="article__footer">
+		<footer class="article__footer">
 			<span class="article__read-more">
 				<?= esc_html_x( 'Lees meer', 'Artikel overicht', 'indicia-theme' ) ?>
 			</span>
-			</footer>
-		</article>
-	</div>
+		</footer>
+	</article>
 </a>
+<!-- /.hover__target -->
+

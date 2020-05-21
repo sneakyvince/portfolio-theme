@@ -6,7 +6,7 @@ $font-stack                   : 'Inter', system-ui, -apple-system, BlinkMacSyste
 $font-family-monospace        : 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
 // Fonts general
-$global-font-size             : 16px;
+$global-font-size             : 18px;
 $global-lineheight            : 1.125;
 $global-weight-normal         : 400;
 $global-weight-medium         : 500;
@@ -55,8 +55,10 @@ $header-styles                : (
 );
 
 // Links
-$anchor-color                 : $primary-color;
+$anchor-color                 : scale-color($primary-color, $lightness : 10%);
+$anchor-color                 : #4152FA;
 $anchor-color-hover           : scale-color($anchor-color, $lightness : 20%);
+$anchor-color-hover           : $anchor-color;
 $anchor-text-decoration       : none;
 $anchor-text-decoration-hover : none;
 

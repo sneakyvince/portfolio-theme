@@ -27,12 +27,9 @@
 	</section>
 
 	<section>
-		<!--		<div class="grid-container">-->
-		<!--			--><?php //get_template_part( 'templates/navigation' ); ?>
-		<!--		</div>-->
+		<div class="grid-container">
+			<?php get_template_part( 'templates/navigation' ); ?>
+		</div>
 	</section>
-
-
-	<?php comments_template( '/templates/comments.php' ); ?>
 
 <?php endwhile; ?>
