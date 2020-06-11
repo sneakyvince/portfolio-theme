@@ -1,9 +1,6 @@
 //Font stacks
-$font-stack                   : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 $font-stack                   : 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-// $font-stack                   : 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-// $font-stack-headings          : 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-$font-family-monospace        : 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$font-family-monospace        : 'Jetbrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 
 // Fonts general
 $global-font-size             : 18px;
@@ -29,45 +26,43 @@ $header-margin-bottom         : 0.6rem;
 $header-font-weight           : $global-weight-semi-bold;
 $header-styles                : (
 	'small': (
-		'h1': ('fs': 60, 'lh': 68, 'mt': 0, 'mb': $header-margin-bottom),
+		'h1': ('fs': 48, 'lh': 56, 'mt': 0, 'mb': 24),
 		'h2': ('fs': 52, 'lh': 60, 'mt': 0, 'mb': $header-margin-bottom),
 		'h3': ('fs': 44, 'lh': 52, 'mt': 0, 'mb': $header-margin-bottom),
 		'h4': ('fs': 34, 'lh': 42, 'mt': 0, 'mb': $header-margin-bottom),
-		'h5': ('fs': 26, 'lh': 34, 'mt': 0, 'mb': $header-margin-bottom),
-		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': $header-margin-bottom)
+		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 24),
+		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 24)
 	),
 	'medium': (
-		'h1': ('fs': 62, 'lh': 70, 'mt': 0, 'mb': $header-margin-bottom),
-		'h2': ('fs': 54, 'lh': 62, 'mt': 0, 'mb': $header-margin-bottom),
-		'h3': ('fs': 46, 'lh': 54, 'mt': 0, 'mb': $header-margin-bottom),
+		'h1': ('fs': 60, 'lh': 68, 'mt': 0, 'mb': 24),
+		'h2': ('fs': 44, 'lh': 62, 'mt': 0, 'mb': 24),
+		'h3': ('fs': 32, 'lh': 40, 'mt': 0, 'mb': $header-margin-bottom),
 		'h4': ('fs': 36, 'lh': 44, 'mt': 0, 'mb': $header-margin-bottom),
-		'h5': ('fs': 28, 'lh': 36, 'mt': 0, 'mb': $header-margin-bottom),
-		'h6': ('fs': 20, 'lh': 28, 'mt': 0, 'mb': $header-margin-bottom)
+		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 24),
+		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 24)
 	),
 	'large': (
-		'h1': ('fs': 64, 'lh': 72, 'mt': 16, 'mb': $header-margin-bottom),
-		'h2': ('fs': 56, 'lh': 64, 'mt': 0, 'mb': $header-margin-bottom),
-		'h3': ('fs': 48, 'lh': 56, 'mt': 0, 'mb': $header-margin-bottom),
-		'h4': ('fs': 40, 'lh': 48, 'mt': 0, 'mb': $header-margin-bottom),
-		'h5': ('fs': 32, 'lh': 40, 'mt': 0, 'mb': $header-margin-bottom),
-		'h6': ('fs': 24, 'lh': 32, 'mt': 0, 'mb': $header-margin-bottom)
+		'h1': ('fs': 72, 'lh': 80, 'mt': 0, 'mb': 24),
+		'h2': ('fs': 72, 'lh': 80, 'mt': 0, 'mb': 24),
+		'h3': ('fs': 48, 'lh': 54, 'mt': 0, 'mb': 24),
+		'h4': ('fs': 36, 'lh': 42, 'mt': 0, 'mb': 24),
+		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 24),
+		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 24)
 	),
 );
 
 // Links
-$anchor-color                 : scale-color($primary-color, $lightness : 10%);
-$anchor-color                 : #4152FA;
-$anchor-color-hover           : scale-color($anchor-color, $lightness : 20%);
-$anchor-color-hover           : $anchor-color;
-$anchor-text-decoration       : none;
+$anchor-color                 : $primary-color;
+$anchor-color-hover           : adjust-color($primary-color, $saturation : -28, $lightness : -8);
+$anchor-text-decoration       : underline;
 $anchor-text-decoration-hover : none;
 
 // Code
-$enable-code-inline           : false;
-$code-color                   : $primary-text;
+//$enable-code-inline           : false;
+$code-color                   : $black;
 $code-font-family             : $font-family-monospace;
 $code-font-weight             : 400;
-$code-background              : $surface-border-color;
+$code-background              : $grey-2;
 $code-border                  : none;
-$code-padding                 : 0.2rem 0.4rem;
+$code-padding                 : 0.1rem 0.2rem;
 $code-block-padding           : rem-calc(15px 20px);

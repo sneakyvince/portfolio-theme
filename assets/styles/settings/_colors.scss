@@ -1,40 +1,39 @@
 // Facebook colors
-$black                : #18191A;
-$white                : #FFF;
-
+$black              : #18214D;
+$white              : #FFF;
+$grey-1             : #DFE4EA;
+$grey-2             : #E0E4E9;
 // Panel colors
-$main-background      : #232327;
-$surface-background   : #39393D;
-$surface-border-color : #39393D;
+$main-background    : $white;
+$surface-background : #EFF2F6;
+$main-border-color  : $grey-1;
 
 // Text colors
-$primary-text         : #E4E6EB;
-$primary-heading      : $primary-text;
-$secondary-text       : #B0B3B8;
-$primary-icon         : $secondary-text;
-
-// Shadow colors
-$shadow-1             : rgba(0, 0, 0, 0.1);
-$shadow-2             : rgba(0, 0, 0, 0.2);
+$primary-text       : $black;
+$primary-heading    : $black;
+$shade-6            : rgba(24, 33, 77, .6);
+$shade-5            : rgba(24, 33, 77, .5);
+$shade-4            : rgba(24, 33, 77, .4);
+$shade-1            : rgba(24, 33, 77, .1);
 
 // Colors
-$primary-color        : #4053FA;
-$secondary-color      : #18BFBB;
+$blue               : #4053FA;
+$orange             : #E79D3F;
+$red                : #E06A63;
+$pink               : #E0719E;
+$light-pink         : #EEBED3;
+$yellow             : #F6E049;
+$perano             : #AAC6FC;
+$green              : #CEDD71;
+$mint               : #A7D99A;
+$bermuda            : #7ED6C2;
 
-$orange               : #E79D3F;
-$red                  : #E06A63;
-$pink                 : #E0719E;
-$light-pink           : #EEBED3;
-$yellow               : #F6E049;
-$perano               : #AAC6FC;
-$green                : #CEDD71;
-$mint                 : #A7D99A;
-$bermuda              : #7ED6C2;
+$primary-color      : $blue;
+$secondary-color    : $grey-1;
 
-$foundation-palette   : (
+$foundation-palette : (
 	primary : $primary-color,
 	secondary : $secondary-color,
-	//success : $green,
 	success : $mint,
 	warning : $orange,
 	alert : $red,

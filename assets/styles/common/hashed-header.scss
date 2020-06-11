@@ -1,0 +1,38 @@
+.hashed-header {
+	position   : relative;
+	transition : color 150ms ease-out;
+
+	&::before {
+		display        : block;
+		content        : ' ';
+		margin-top     : -120px;
+		height         : 120px;
+		visibility     : hidden;
+		pointer-events : none;
+	}
+
+	&:hover {
+		.hashed-header__link::before {
+			opacity : 1;
+		}
+	}
+
+	&:target {
+		color : $primary-color;
+	}
+
+	&__link {
+		position : absolute;
+
+		&::before {
+			position      : absolute;
+			right         : 0;
+			padding-right : rem-calc(5px);
+			content       : '🔗';
+			font-size     : rem-calc(24px);
+			line-height   : rem-calc(48px);
+			opacity       : 0;
+			transition    : opacity 150ms ease-out;
+		}
+	}
+}

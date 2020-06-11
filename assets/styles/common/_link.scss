@@ -1,44 +1,44 @@
-a {
-	padding             : rem-calc(2px 0);
-	text-decoration     : none;
-	background-image    : linear-gradient(currentColor, currentColor);
-	background-position : 0 100%;
-	background-repeat   : no-repeat;
-	background-size     : 0 1px;
-	transition          : background-size .15s ease-out;
+.link {
+	&--primary {
+		text-decoration       : underline;
+		text-decoration-color : currentColor;
+		transition            : text-decoration-color 1509ms ease-out, color 1509ms ease-out;
 
-	&:hover {
-		background-size : 100% 1px;
+		@include hocus {
+			text-decoration-color : transparent;
+		}
 	}
 
-	&:focus {
-		background-size     : 80% 1px;
-		background-position : 50% 100%;
+	&--header {
+		text-decoration : none;
+		color           : $black;
+		transition      : color 150ms ease-out;
+
+		@include hocus {
+			color : $shade-6;
+		}
+	}
+
+	&--footer {
+		text-decoration : none;
+		color           : $shade-5;
+		transition      : color 150ms ease-out;
+
+		@include hocus {
+			color : $black;
+		}
+	}
+
+	&--reset {
+		color           : inherit;
+		text-decoration : none;
+
+		@include hocus {
+			color : currentColor;
+		}
 	}
 }
 
-//a {
-//	color                        : #FF7800;
-//	box-shadow                   : inset 0 -1px 0 currentColor, 4px 0 0 transparent, -4px 0 0 transparent;
-//	box-decoration-break         : clone;
-//	padding-bottom               : 2px;
-//	padding-top                  : 2px;
-//	text-decoration              : none;
-//	-webkit-text-decoration-skip : objects;
-//	transition                   : box-shadow .2s ease-out 0s, background .2s ease-out 0s;
-//
-//	&:hover, &:active {
-//		box-shadow    : inset 0 -1px 0 transparent;
-//		outline-width : 0;
-//
-//	}
-//
-//	&:focus {
-//		border-radius: 5px;
-//		background         : #FF7800;
-//		-webkit-box-shadow : inset 0 -1px 0 #FF7800, 4px 0 0 #FF7800, -4px 0 0 #FF7800;
-//		box-shadow         : inset 0 -1px 0 #FF7800, 4px 0 0 #FF7800, -4px 0 0 #FF7800;
-//		color              : #FFF;
-//		outline-width      : 0;
-//	}
-//}
+a {
+	@extend .link--primary;
+}

@@ -1,27 +1,38 @@
 .magellan {
-	border        : 1px solid $surface-border-color;
+	margin-right  : 1px;
+	border        : 1px solid $main-border-color;
 	border-radius : rem-calc(15px);
 	overflow      : hidden;
 
 	&__title {
-		padding       : rem-calc(15px);
+		font-weight   : $global-weight-semi-bold;
+		padding       : rem-calc(20px);
 		margin-bottom : 0;
-		border-bottom : 1px solid $surface-border-color;
+		border-bottom : 1px solid $main-border-color;
 	}
 
 	&__body {
+		padding : rem-calc(10px 0);
 	}
 
 	&__item a {
-		border : 1px solid transparent;
-		@include transition($prop : background);
+		@extend .link--reset;
+		line-height : initial;
+		padding     : rem-calc(8px 20px);
+		border      : 1px solid transparent;
+		transition  : background 150ms ease-out, color 150ms ease-out;
 
 		&:hover {
-			background : $surface-background;
+			color : $shade-6;
 		}
 
 		&.is-active {
+			color      : $white;
 			background : $primary-color;
+
+			&::before {
+				content : '👉 '
+			}
 		}
 	}
 }

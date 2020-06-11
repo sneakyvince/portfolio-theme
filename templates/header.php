@@ -1,3 +1,9 @@
+<?php
+
+use IndiciaInteractiv\Theme\Assets;
+
+?>
+
 <header id="site-header" class="header">
 	<div class="grid-container">
 		<div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
@@ -7,11 +13,19 @@
 
 		<div class="top-bar">
 			<nav class="top-bar-left">
-				<ul class="menu">
-					<li class="home">
-						<a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-					</li>
-				</ul>
+				<div class="home">
+					<?php
+					$arrContextOptions = array(
+						"ssl" => array(
+							"verify_peer"      => false,
+							"verify_peer_name" => false,
+						),
+					); ?>
+					<a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
+						<?= file_get_contents( Assets\asset_path( '/icons/globe-outline.svg' ), false, stream_context_create( $arrContextOptions ) ) ?>
+						<?php bloginfo( 'name' ); ?>
+					</a>
+				</div>
 			</nav><!-- /top-bar-left -->
 
 			<nav class="top-bar-right">

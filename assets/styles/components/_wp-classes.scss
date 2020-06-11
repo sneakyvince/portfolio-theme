@@ -3,48 +3,76 @@
 
 body.sticky,
 article.sticky {
-  position: static;
+	position : static;
 }
 
 // Media alignment
 .alignnone {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%;
-  height: auto;
+	margin-left  : 0;
+	margin-right : 0;
+	max-width    : 100%;
+	height       : auto;
 }
 
 .aligncenter {
-  display: block;
-  margin: #{$global-lineheight / 2}rem auto;
-  height: auto;
+	display : block;
+	margin  : #{$global-lineheight / 2}rem auto;
+	height  : auto;
 }
 
 .alignleft,
 .alignright {
-  margin-bottom: #{$global-lineheight / 2}rem;
-  height: auto;
+	margin-bottom : #{$global-lineheight / 2}rem;
+	height        : auto;
 }
 
 @include breakpoint(small) {
-  // Only float if not on an extra small device
-  .alignleft {
-    float: left;
-    margin-right: #{$global-lineheight / 2}rem;
-  }
-  .alignright {
-    float: right;
-    margin-left: #{$global-lineheight / 2}rem;
-  }
+	// Only float if not on an extra small device
+	.alignleft {
+		float        : left;
+		margin-right : #{$global-lineheight / 2}rem;
+	}
+	.alignright {
+		float       : right;
+		margin-left : #{$global-lineheight / 2}rem;
+	}
 }
 
 // Captions
 .wp-caption {
-  @extend .thumbnail;
-  line-height: normal;
+	@extend .thumbnail;
+	line-height : normal;
 }
 
 // Text meant only for screen readers
 .screen-reader-text {
-  @extend .show-for-sr;
+	@extend .show-for-sr;
+}
+
+.blocks-gallery-grid .blocks-gallery-image,
+.blocks-gallery-grid .blocks-gallery-item,
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+
+	figure {
+		flex-direction : column;
+	}
+
+	figcaption {
+		position   : static;
+		background : none;
+		color      : black;
+		font-size  : 1rem;
+		font-style : italic;
+		padding    : rem-calc(15px);
+	}
+
+}
+
+.blocks-gallery-item {
+	margin : rem-calc(1.5rem 0);
+}
+
+.wp-block-gallery {
+	margin : rem-calc(1.5rem 0);
 }

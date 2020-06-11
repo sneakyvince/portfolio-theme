@@ -2,7 +2,7 @@
 	margin-top : rem-calc(200px);
 
 	&__nav {
-		border-top  : 1px solid $surface-border-color;
+		border-top  : 1px solid $main-border-color;
 		padding-top : rem-calc(50px);
 
 		.widget {
@@ -14,7 +14,7 @@
 			}
 
 			li {
-				color         : $secondary-text;
+				color         : $shade-5;
 				display       : block;
 				margin-bottom : rem-calc(15px);
 
@@ -26,16 +26,14 @@
 			}
 
 			a {
-				color : inherit;
-
-				&:hover, &:focus {
-					color : inherit;
-				}
+				@extend .link--footer;
 			}
 		}
 	}
 
 	&__bottom {
+		border-top      : 1px solid $main-border-color;
+		padding-top     : rem-calc(50px);
 		display         : flex;
 		align-items     : center;
 		justify-content : space-between;
@@ -43,7 +41,7 @@
 	}
 
 	&__copyright {
-		color : $secondary-text;
+		color : $shade-5;
 	}
 
 	&__back-to-top {

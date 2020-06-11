@@ -9,8 +9,8 @@ $global-flexbox: true !global;
 @include foundation-xy-grid-classes;
 
 // Generic components
-//@include foundation-button;
-//@include foundation-button-group;
+@include foundation-button;
+@include foundation-button-group;
 //@include foundation-close-button;
 //@include foundation-label;
 //@include foundation-progress-bar;

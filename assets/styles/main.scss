@@ -2,6 +2,7 @@
 @import 'settings/colors';
 @import 'settings/typography';
 @import 'settings/layout-elements';
+@import 'settings/button';
 
 // Foundation
 @import '~foundation-sites/scss/foundation.scss';
@@ -12,6 +13,7 @@
 @import 'common/global';
 @import 'common/animations';
 @import 'common/link';
+@import 'common/hashed-header';
 
 //Components
 @import 'components/buttons';
@@ -19,6 +21,7 @@
 @import 'components/forms';
 @import 'components/grid';
 @import 'components/content';
+@import 'components/definition';
 @import 'components/wp-classes';
 @import 'components/posts_navigation';
 @import 'components/magellan';
@@ -26,10 +29,12 @@
 // Foundation components
 @import 'components/foundation/top-bar';
 @import 'components/foundation/dropdown-menu';
+@import 'components/foundation/button';
 
 //Layouts
 @import 'layouts/header';
 @import 'layouts/content-header';
+@import 'layouts/page-header';
 @import 'layouts/sidebar';
 @import 'layouts/comments';
 @import 'layouts/footer';

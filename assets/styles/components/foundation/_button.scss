@@ -1,0 +1,11 @@
+.button {
+	//@include disable-anchor-styles;
+}
+
+.hollow.button.secondary {
+	color : $black;
+
+	@include hocus {
+		color : $black;
+	}
+}

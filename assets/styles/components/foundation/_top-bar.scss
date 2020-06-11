@@ -1,20 +1,47 @@
 .top-bar {
-	margin      : rem-calc(15 0);
-	font-weight : $global-weight-semi-bold;
+	margin : rem-calc(5 0);
+
+	.home {
+		display     : flex;
+		align-items : center;
+		//color: $primary-color;
+		font-size   : rem-calc(30px);
+		font-weight : $global-weight-semi-bold;
+
+		@include transition($prop : color);
+
+		@include hocus {
+			color : $shade-6;
+
+			&__globe {
+				stroke : #747A94;
+			}
+		}
+
+
+		&__icon {
+			display        : inline-block;
+			vertical-align : middle;
+			width          : rem-calc(40px);
+			height         : rem-calc(40px);
+
+		}
+	}
 
 	.menu {
 		a {
-			padding       : rem-calc(10px 15px);
+			@extend .link--header;
+			padding       : rem-calc(10px 25px);
 			border-radius : rem-calc(10px);
 			line-height   : rem-calc(20px);
-			@include disable-anchor-styles;
-			@include transition($prop : background);
-			@include button-hocus;
 		}
 
-		li.current-menu-item a {
-			background : $primary-color;
-			@include button-hocus;
+		li.current-menu-item a:before {
+			content : '👉 '
 		}
+	}
+
+	.submenu {
+		padding : rem-calc(15px 0);
 	}
 }

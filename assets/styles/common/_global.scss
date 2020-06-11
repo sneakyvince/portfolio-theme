@@ -25,39 +25,17 @@ body {
 }
 
 ::selection {
-	background  : #4152FA;
-	text-shadow : none;
+	background : $perano;
 }
 
 ::-moz-selection {
-	background  : $primary-color;
-	text-shadow : none;
-}
-
-.card {
-	@include card();
-}
-
-:root {
-	--header-height : 10px;
-}
-//code {
-////	background  : hsla(0, 0%, 100%, .1);
-////	padding     : 3px 5px;
-////	color       : #B3B9C5;
-////	font-weight : 500;
-////}
-
-code {
-	padding       : rem-calc(3px 5px);
-	border-radius : 5px;
-}
-
-
-.menu a {
-	@include disable-anchor-styles;
+	background : $perano;
 }
 
 img {
 	border-radius : rem-calc(10px);
+}
+
+code {
+	border-radius : rem-calc(5px);
 }

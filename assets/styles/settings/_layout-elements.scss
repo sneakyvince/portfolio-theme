@@ -28,11 +28,11 @@ $titlebar-background                  : none;
 
 // Dropdown
 $dropdownmenu-arrows                  : false;
-$dropdownmenu-border                  : 1px solid $surface-border-color;
+$dropdownmenu-border                  : none;
 $dropdownmenu-min-width               : 250px;
-$dropdownmenu-padding                 : rem-calc(200px);
-$dropdownmenu-submenu-background      : $main-background;
-$dropdownmenu-submenu-padding         : 10px;
-$dropdown-menu-item-color-active      : inherit;
-$dropdown-menu-item-background-active : rgba($surface-border-color, 0.8);
-$dropdown-menu-item-background-active : $surface-background;
+$dropdownmenu-padding                 : 1.3rem 1rem;
+//$dropdownmenu-submenu-background      : $main-background;
+$dropdownmenu-submenu-padding         : 20px;
+$dropdown-menu-item-color-active      : $shade-6;
+//$dropdown-menu-item-background-active : rgba($main-border-color, 0.8);
+//$dropdown-menu-item-background-active : $surface-background;

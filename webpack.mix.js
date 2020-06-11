@@ -39,6 +39,11 @@ mix.options( {
 		'scripts'
 	)
 
+	.js(
+		'assets/scripts/editor.js',
+		'scripts'
+	)
+
 	//Compile the sass
 	.sass( 'assets/styles/main.scss', 'styles', { outputStyle: 'compressed' } )
 

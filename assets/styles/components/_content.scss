@@ -1,8 +1,7 @@
 .item {
 	&__inner {
 		height         : 100%;
-		padding-bottom : rem-calc(30px);
-		border-bottom  : 1px solid $surface-border-color;
+		padding-bottom : rem-calc(40px);
 	}
 }
 
@@ -12,19 +11,45 @@
 	flex-grow      : 1;
 	height         : 100%;
 	padding        : rem-calc(15px);
-	border-radius  : rem-calc(20px);
-	min-height     : rem-calc(400px);
+	border-radius  : rem-calc(25px);
+	min-height     : rem-calc(600px);
 	@include transition;
 
-	&__link {
-		@include disable-anchor-styles;
+	&:hover {
+
+		.article__read-more {
+			background : $primary-color;
+			color      : $white;
+		}
 	}
 
-	&__image {
+	&__link {
+		@extend .link--reset;
+
+		@include hocus {
+			.article {
+				background : $surface-background;
+			}
+		}
+	}
+
+	&__image, &__placeholder {
 		width         : 100%;
 		height        : rem-calc(200px);
 		margin-bottom : rem-calc(20px);
 		@include object-fit(cover);
+	}
+
+	&__placeholder {
+		display         : flex;
+		align-items     : center;
+		justify-content : center;
+		@extend h1;
+		margin          : 0;
+		margin-bottom   : rem-calc(20px);
+		font-family     : $font-stack;
+		background      : $surface-background;
+		border-radius   : rem-calc(10px);
 	}
 
 	&__header {
@@ -33,7 +58,7 @@
 
 	&__category {
 		display       : inline-block;
-		border        : 1px solid $surface-border-color;
+		border        : 1px solid $main-border-color;
 		padding       : rem-calc(5px 10px);
 		border-radius : rem-calc(10px);
 		margin-bottom : rem-calc(10px);
@@ -41,34 +66,20 @@
 	}
 
 	&__title {
-		@extend h5;
+		//@extend h5;
+		font-size : rem-calc(25px);
 	}
 
 	&__footer {
-		//@include button-hocus;
 	}
 
 	&__read-more {
 		display       : inline-block;
+		color         : $black;
 		background    : $surface-background;
 		margin-top    : rem-calc(30px);
 		padding       : rem-calc(5px 10px);
 		border-radius : rem-calc(10px);
-		@include transition(background);
-	}
-
-	&:hover {
-		background : #1C1C1F;
-
-		//.article__category {
-		//	background : $main-background;
-		//}
-	}
-
-	&:focus {
-		background : $primary-color;
-		//.article__read-more {
-		//	background : $primary-color;
-		//}
+		transition    : all 150ms ease-out;
 	}
 }

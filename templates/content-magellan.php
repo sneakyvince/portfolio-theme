@@ -33,12 +33,12 @@ foreach ( $blocks as $block ) {
 if ( $table_of_contents ) : ?>
 
 	<div class="magellan">
-		<h6 class="magellan__title">
+		<div class="magellan__title">
 			<?= esc_html__( 'Inhoudsopgave', 'indicia-theme' ) ?>
-		</h6>
+		</div>
 
 		<div class="magellan__body">
-			<ul class="vertical menu" data-magellan data-deep-linking="true" data-threshold="90"
+			<ul class="vertical menu" data-magellan data-threshold="90"
 			    data-animation-easing="swing" data-animation-duration="1000">
 				<?php foreach ( $table_of_contents as $anchor => $title ) : ?>
 					<li class="magellan__item">

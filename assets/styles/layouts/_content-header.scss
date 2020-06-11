@@ -1,11 +1,11 @@
-.content-header {
+.single-header {
 	position : relative;
 	overflow : hidden;
 	margin   : rem-calc(150px 0 50px);
 
 	&__line {
 		padding-bottom : 100px;
-		border-bottom  : 1px solid $surface-border-color;
+		border-bottom  : 1px solid $main-border-color;
 	}
 
 	&__image {

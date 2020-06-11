@@ -22,7 +22,7 @@
 		width                 : rem-calc(25px);
 		height                : rem-calc(25px);
 		margin-left           : rem-calc(5px);
-		background-image      : url('../icons/arrow-right-250-white.svg');
+		background-image      : url('../icons/arrow-right-250.svg');
 
 	}
 
@@ -32,26 +32,16 @@
 		width                 : rem-calc(25px);
 		height                : rem-calc(25px);
 		margin-right          : rem-calc(5px);
-		background-image      : url('../icons/arrow-left-250-white.svg');
+		background-image      : url('../icons/arrow-left-250.svg');
 	}
 
 	.nav-next a, .nav-previous a {
-		@include disable-anchor-styles;
-		display       : flex;
-		padding       : rem-calc(10px 35px);
-		font-weight   : $global-weight-semi-bold;
-		font-size     : rem-calc(20px);
-		border-radius : rem-calc(50%);
-		background    : $primary-color;
-		transition    : background .15s ease-out, color .15s ease-out;
+		@extend .link--reset;
+		@extend .button;
+		@extend .secondary;
+		@extend .hollow;
 
-		&:hover {
-			background : $surface-background;
-
-		}
-
-		&:focus {
-			background : transparent;
-		}
+		display     : flex;
+		align-items : center;
 	}
 }

@@ -1,0 +1,16 @@
+.definition {
+	&__separator {
+		border-bottom : 1px solid $grey-1;
+	}
+
+	&__alpha {
+		background      : $primary-color;
+		color           : $white;
+		width           : rem-calc(72px);
+		height          : rem-calc(72px);
+		border-radius   : rem-calc(50%);
+		display         : inline-flex;
+		align-items     : center;
+		justify-content : center;
+	}
+}
