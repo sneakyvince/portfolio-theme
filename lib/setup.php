@@ -86,7 +86,7 @@ function display_sidebar() {
  * Theme assets
  */
 function action__wp_enqueue_scripts() {
-	wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap', false, null );
+	//wp_enqueue_style( 'google_fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap', false, null );
 	wp_enqueue_style( 'indicia_theme_css', Assets\asset_path( '/styles/main.css' ), false, null );
 
 	if ( is_single() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -110,11 +110,11 @@ function action__enqueue_block_editor_assets() {
 
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\action__enqueue_block_editor_assets' );
 
-function order_definitions( $query ) {
-	if ( 'definitions' === $query->get( 'post_type' ) ) {
+function action__order_definitions( $query ) {
+	if ( 'definition' === $query->get( 'post_type' ) ) {
 		$query->set( 'orderby', 'title' );
 		$query->set( 'order', 'ASC' );
 	}
 }
 
-add_action( 'pre_get_posts', __NAMESPACE__ . '\\order_definitions' );
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\action__order_definitions' );

@@ -73,17 +73,21 @@
 /******/ 	// This file contains only the entry chunk.
 /******/ 	// The chunk loading function for additional chunks
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		var promises = [];
 /******/
-/******/
-/******/ 		// JSONP chunk loading for javascript
-/******/
-/******/ 		var installedChunkData = installedChunks[chunkId];
-/******/ 		if(installedChunkData !== 0) { // 0 means "already installed".
-/******/
-/******/ 			// a Promise means "currently loading".
-/******/ 			if(installedChunkData) {
-/******/
+		var promises = [];
+		/******/
+		/******/
+		/******/ 		// JSONP chunk loading for javascript
+		/******/
+		/******/
+		var installedChunkData = installedChunks[ chunkId ];
+		/******/
+		if ( installedChunkData !== 0 ) { // 0 means "already installed".
+			/******/
+			/******/ 			// a Promise means "currently loading".
+			/******/
+			if ( installedChunkData ) {
+				/******/
 				promises.push( installedChunkData[ 2 ] );
 				/******/
 			} else {
@@ -2532,11 +2536,12 @@ DropdownMenu.defaults = {
    * @type {boolean}
    * @default true
    */
-  forceFollow: true
+  forceFollow : true
 };
 
 
-/***/ }),
+			/***/
+		} ),
 
 		/***/ 5 :
 		/*!*************************************************************!*\
@@ -3645,16 +3650,22 @@ DropdownMenu.defaults = {
 					/******/ 	// expose the module cache
 					/******/
 					__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
+					/******/
+					/******/ 	// define getter function for harmony exports
+					/******/
+					__webpack_require__.d = function ( exports, name, getter ) {
+						/******/
+						if ( ! __webpack_require__.o( exports, name ) ) {
+							/******/
+							Object.defineProperty( exports, name, { enumerable : true, get : getter } );
+							/******/
+						}
+						/******/
+					};
+					/******/
+					/******/ 	// define __esModule on exports
+					/******/
+					__webpack_require__.r = function ( exports ) {
 /******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 		}
@@ -4618,16 +4629,28 @@ ResponsiveToggle.defaults = {
 					};
 					/******/
 					/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+					/******/
+					__webpack_require__.n = function ( module ) {
+						/******/
+						var getter = module && module.__esModule ?
+							/******/            function getDefault() {
+								return module[ 'default' ];
+							} :
+							/******/            function getModuleExports() {
+								return module;
+							};
+						/******/
+						__webpack_require__.d( getter, 'a', getter );
+						/******/
+						return getter;
+						/******/
+					};
+					/******/
+					/******/ 	// Object.prototype.hasOwnProperty.call
+					/******/
+					__webpack_require__.o = function ( object, property ) {
+						return Object.prototype.hasOwnProperty.call( object, property );
+					};
 /******/
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";

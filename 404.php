@@ -1,7 +1,11 @@
-<?php get_template_part( 'templates/page', 'header' ); ?>
+<?php //get_template_part( 'templates/page', 'header' ); ?>
 
-<div class="alert alert-warning">
-	<?php _e( 'Sorry, de pagina die je probeert te bezoeken bestaat niet.', 'indicia-theme' ); ?>
-</div>
+<section class="section-wrap">
+	<div class="grid-container">
+		<div class="alert alert-warning">
+			<h1><?php _e( '4😵4, pagina niet gevonden...', 'indicia-theme' ); ?></h1>
 
-<?php get_search_form(); ?>
+			<?php get_search_form(); ?>
+		</div>
+	</div>
+</section>

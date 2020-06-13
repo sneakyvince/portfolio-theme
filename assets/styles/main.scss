@@ -2,15 +2,17 @@
 @import 'settings/colors';
 @import 'settings/typography';
 @import 'settings/layout-elements';
-@import 'settings/button';
+@import 'settings/buttons';
+@import 'settings/inputs';
 
 // Foundation
 @import '~foundation-sites/scss/foundation.scss';
 @import 'settings/foundation';
 
-//Global
+// Common
 @import 'common/mixins';
 @import 'common/global';
+@import 'common/fonts';
 @import 'common/animations';
 @import 'common/link';
 @import 'common/hashed-header';
@@ -18,7 +20,9 @@
 //Components
 @import 'components/buttons';
 @import 'components/comments';
+@import 'components/inputs';
 @import 'components/forms';
+@import 'components/searchform';
 @import 'components/grid';
 @import 'components/content';
 @import 'components/definition';

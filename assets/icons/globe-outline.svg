@@ -1,6 +1,7 @@
 <svg class="home__icon" xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
 	<title>ionicons-v5-e</title>
-	<g class="home__globe" stroke="currentColor">
+	<g class="home__globe" stroke="currentColor" fill="none">
+		<circle cx="256" cy="256" r="220"/>
 		<path d='M256,48C141.13,48,48,141.13,48,256s93.13,208,208,208,208-93.13,208-208S370.87,48,256,48Z'
 		      style='fill:none;stroke-miterlimit:10;stroke-width:32px'/>
 		<path d='M256,48c-58.07,0-112.67,93.13-112.67,208S197.93,464,256,464s112.67-93.13,112.67-208S314.07,48,256,48Z'

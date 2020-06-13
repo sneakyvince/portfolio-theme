@@ -13,20 +13,21 @@ use IndiciaInteractiv\Theme\Assets;
 
 		<div class="top-bar">
 			<nav class="top-bar-left">
-				<div class="home">
+				<a class="home" href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
 					<?php
 					$arrContextOptions = array(
 						"ssl" => array(
 							"verify_peer"      => false,
 							"verify_peer_name" => false,
 						),
-					); ?>
-					<a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?= file_get_contents( Assets\asset_path( '/icons/globe-outline.svg' ), false, stream_context_create( $arrContextOptions ) ) ?>
+					);
+					echo file_get_contents( Assets\asset_path( '/icons/globe-outline.svg' ), false, stream_context_create( $arrContextOptions ) )
+					?>
+					<span class="home__title">
 						<?php bloginfo( 'name' ); ?>
-					</a>
-				</div>
-			</nav><!-- /top-bar-left -->
+					</span>
+				</a>
+			</nav>
 
 			<nav class="top-bar-right">
 				<ul class="dropdown menu is-dropdown-submenu-parent" data-dropdown-menu>
@@ -40,6 +41,10 @@ use IndiciaInteractiv\Theme\Assets;
 						] ); ?>
 					<?php endif; ?>
 				</ul>
+
+				<?php
+				get_search_form();
+				?>
 			</nav><!-- /top-bar-right -->
 		</div><!-- /top-bar -->
 	</div><!-- /grid-container -->

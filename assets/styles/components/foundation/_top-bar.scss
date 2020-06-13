@@ -1,30 +1,65 @@
 .top-bar {
-	margin : rem-calc(5 0);
-
-	.home {
+	&-left, &-right {
 		display     : flex;
 		align-items : center;
-		//color: $primary-color;
-		font-size   : rem-calc(30px);
-		font-weight : $global-weight-semi-bold;
+	}
 
-		@include transition($prop : color);
+	.home {
+		@extend .link--reset;
+		color       : $primary-color;
+		display     : inline-flex;
+		align-items : flex-start;
 
-		@include hocus {
-			color : $shade-6;
+		&__title {
+			position    : relative;
+			margin-left : rem-calc(5px);
+			color       : $primary-color;
+			font-size   : rem-calc(30px);
+			line-height : rem-calc(35px);
+			font-weight : $global-weight-semi-bold;
+			transition  : all 150ms ease-out;
 
-			&__globe {
-				stroke : #747A94;
+			&::before, &::after {
+				content       : '';
+				position      : absolute;
+				bottom        : 0;
+				border-bottom : rem-calc(3px) solid $primary-color;
+			}
+
+			&::before {
+				width      : 0;
+				transition : width 150ms ease-out;
+				left       : 0;
+			}
+
+			&::after {
+				width      : 100%;
+				transition : width 150ms ease-out;
+				right      : 0;
 			}
 		}
 
-
 		&__icon {
-			display        : inline-block;
-			vertical-align : middle;
-			width          : rem-calc(40px);
-			height         : rem-calc(40px);
+			width  : rem-calc(40px);
+			height : rem-calc(40px);
+		}
 
+		&__globe {
+			stroke : $primary-color;
+		}
+
+		@include hocus {
+			.home__title {
+				&::after {
+					width      : 0%;
+					transition : width 0.2s ease-in 0s;
+				}
+
+				&::before {
+					width      : 100%;
+					transition : width 0.2s ease-in 0.2s;
+				}
+			}
 		}
 	}
 

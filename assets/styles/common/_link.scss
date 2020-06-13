@@ -2,7 +2,7 @@
 	&--primary {
 		text-decoration       : underline;
 		text-decoration-color : currentColor;
-		transition            : text-decoration-color 1509ms ease-out, color 1509ms ease-out;
+		transition            : text-decoration-color 150ms ease-out, color 150ms ease-out;
 
 		@include hocus {
 			text-decoration-color : transparent;
@@ -34,7 +34,8 @@
 		text-decoration : none;
 
 		@include hocus {
-			color : currentColor;
+			color           : currentColor;
+			text-decoration : none;
 		}
 	}
 }

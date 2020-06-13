@@ -1,0 +1,19 @@
+.search-form {
+	margin-top : rem-calc(20px);
+
+	&__inner {
+		display : flex;
+	}
+
+	&__input {
+		margin-bottom : 0;
+		margin-right  : rem-calc(15px);
+		height        : rem-calc(60px);
+	}
+
+	&__submit {
+
+	}
+}
+
+
