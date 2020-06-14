@@ -114,7 +114,75 @@ function action__order_definitions( $query ) {
 	if ( 'definition' === $query->get( 'post_type' ) ) {
 		$query->set( 'orderby', 'title' );
 		$query->set( 'order', 'ASC' );
+		$query->set( 'posts_per_page', - 1 );
 	}
 }
 
 add_action( 'pre_get_posts', __NAMESPACE__ . '\\action__order_definitions' );
+
+function filter__wp_strip_header_tags( $text ) {
+	$raw_excerpt = $text;
+	$excerpt     = '';
+
+	if ( '' === $text ) {
+		//Retrieve the post content.
+		$text = get_the_content( '' );
+		//remove shortcode tags from the given content.
+		$text = strip_shortcodes( $text );
+		$text = apply_filters( 'the_content', $text );
+		$text = str_replace( ']]>', ']]&gt;', $text );
+
+		//Regular expression that strips the header tags and their content.
+		$regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+		$text  = preg_replace( $regex, '', $text );
+
+		/***Change the excerpt word count.***/
+		$excerpt_word_count = 20; //This is WP default.
+		$excerpt_length     = apply_filters( 'excerpt_length', $excerpt_word_count );
+
+		$excerpt = wp_trim_words( $text, $excerpt_length, '...' );
+	}
+
+	return apply_filters( 'wp_trim_excerpt', $excerpt, $raw_excerpt );
+}
+
+add_filter( 'get_the_excerpt', __NAMESPACE__ . '\\filter__wp_strip_header_tags', 5 );
+
+function filter__custom_password_form() {
+	global $post;
+
+	ob_start();
+	$label = 'pwbox-' . ( empty( $post->ID ) ? rand() : $post->ID );
+	?>
+
+	<form class="protected-post-form"
+	      action="<?= esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) ?>"
+	      method="post">
+
+		<p><?= __( "Deze post is beveiligd, voer het wachtwoord hieronder in:" ) ?></p>
+
+		<label class="protected-post-form__label" for="<?= $label ?>">
+			<?= __( "Wachtwoord:" ) ?>
+		</label>
+		<div class="protected-post-form__inputs">
+			<input class="protected-post-form__password" name="post_password" id="<?= $label ?>" type="password"
+			       placeholder="•••••"/>
+			<input class="button protected-post__submit" type="submit" name="Submit" value="<?= esc_attr__( "🔓" ) ?>"/>
+		</div>
+	</form>
+	<?php
+
+
+	$buffer_contents = ob_get_contents();
+	ob_end_clean();
+
+	return $buffer_contents;
+}
+
+add_filter( 'the_password_form', __NAMESPACE__ . '\\filter__custom_password_form' );
+
+function filter__remove_protected_text() {
+	return __( '🔒 %s' );
+}
+
+add_filter( 'protected_title_format', __NAMESPACE__ . '\\filter__remove_protected_text' );

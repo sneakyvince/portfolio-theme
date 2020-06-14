@@ -9,7 +9,7 @@ use IndiciaInteractiv\Theme\Assets;
 		<div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
 			<button class="menu-icon" type="button" data-toggle></button>
 			<div class="title-bar-title">Menu</div>
-		</div><!-- /title-bar -->
+		</div>
 
 		<div class="top-bar">
 			<nav class="top-bar-left">
@@ -41,12 +41,10 @@ use IndiciaInteractiv\Theme\Assets;
 						] ); ?>
 					<?php endif; ?>
 				</ul>
-			</nav><!-- /top-bar-right -->
-
-			<nav class="top-bar-search">
-				<?php get_template_part( 'templates/search-bar' ); ?>
 			</nav>
-			<!-- /.top-bar-search -->
-		</div><!-- /top-bar -->
-	</div><!-- /grid-container -->
-</header><!-- /header -->
+			<!--			<nav class="top-bar-search">-->
+			<!--				--><?php //get_template_part( 'templates/search-bar' ); ?>
+			<!--			</nav>-->
+		</div>
+	</div>
+</header>

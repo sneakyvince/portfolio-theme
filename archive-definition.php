@@ -11,7 +11,7 @@
 <section class="section-wrap">
 	<div class="grid-container">
 		<div class="grid-x grid-margin-x">
-			<div class="entry-content cell small-12 medium-3 large-2" data-sticky-container>
+			<div class="cell small-12 medium-3 large-2" data-sticky-container>
 				<div class="sticky" id="sticky" data-sticky data-margin-top="6.25" data-anchor="definitions-grid">
 					<?php get_template_part( 'templates/definition/definition-magellan' ); ?>
 				</div>

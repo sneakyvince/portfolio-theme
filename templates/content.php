@@ -32,7 +32,7 @@ $thumb    = get_the_post_thumbnail();
 
 			<?php if ( $excerpt ) : ?>
 				<p class="article__excerpt">
-					<?= wp_trim_words( strip_tags( $excerpt ), 20 ); ?>
+					<?= $excerpt ?>
 				</p>
 			<?php endif; ?>
 		</header>
@@ -44,5 +44,3 @@ $thumb    = get_the_post_thumbnail();
 		</footer>
 	</article>
 </a>
-<!-- /.hover__target -->
-

@@ -23,4 +23,23 @@
 	p {
 		font-size : rem-calc(18px);
 	}
+
+
+	.protected-post-form {
+
+
+		&__inputs {
+			display : flex;
+		}
+
+		&__password {
+			height        : rem-calc(60px);
+			margin-right  : rem-calc(15px);
+			margin-bottom : 0;
+		}
+
+		//input[type="submit"] {
+		//	@extend .button;
+		//}
+	}
 }

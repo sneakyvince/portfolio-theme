@@ -53,8 +53,9 @@ article.sticky {
 .blocks-gallery-grid .blocks-gallery-item,
 .wp-block-gallery .blocks-gallery-image,
 .wp-block-gallery .blocks-gallery-item {
-
 	figure {
+		display        : flex;
+		align-items    : center;
 		flex-direction : column;
 	}
 
@@ -66,13 +67,8 @@ article.sticky {
 		font-style : italic;
 		padding    : rem-calc(15px);
 	}
-
 }
 
-.blocks-gallery-item {
-	margin : rem-calc(1.5rem 0);
-}
-
-.wp-block-gallery {
-	margin : rem-calc(1.5rem 0);
+.wp-block-gallery, .blocks-gallery-grid, .blocks-gallery-item {
+	margin : rem-calc(25px 0);
 }

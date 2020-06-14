@@ -1,0 +1,11 @@
+.apa-sources-list {
+	list-style : none;
+
+	li {
+		margin-left : rem-calc(15px);
+	}
+
+	li :first-line {
+		margin-left : 0;
+	}
+}

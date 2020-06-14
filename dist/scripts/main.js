@@ -54,16 +54,19 @@
 /******/ 			return installedModules[moduleId].exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
 /******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
+		var module = installedModules[ moduleId ] = {
+			/******/            i       : moduleId,
+			/******/            l       : false,
+			/******/            exports : {}
+			/******/
+		};
+		/******/
+		/******/ 		// Execute the module function
+		/******/
+		modules[ moduleId ].call( module.exports, module, module.exports, __webpack_require__ );
+		/******/
+		/******/ 		// Flag the module as loaded
 		/******/
 		module.l = true;
 		/******/
@@ -2532,15 +2535,15 @@ DropdownMenu.defaults = {
    * @type {string}
    * @default 'vertical'
    */
-  verticalClass: 'vertical',
+  verticalClass : 'vertical',
 
-  /**
-   * Class applied to right-side oriented menus, Foundation default is `align-right`. Update this if using your own class.
-   * @option
-   * @type {string}
-   * @default 'align-right'
-   */
-  rightClass: 'align-right',
+	/**
+	 * Class applied to right-side oriented menus, Foundation default is `align-right`. Update this if using your own class.
+	 * @option
+	 * @type {string}
+	 * @default 'align-right'
+	 */
+	rightClass : 'align-right',
 
 	/**
 	 * Boolean to force overide the clicking of links to perform default action, on second touch event for mobile.
@@ -3693,16 +3696,27 @@ DropdownMenu.defaults = {
 					/******/ 	// mode & 1: value is a module id, require it
 					/******/ 	// mode & 2: merge all properties of value into the ns
 					/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
+					/******/ 	// mode & 8|1: behave like require
+					/******/
+					__webpack_require__.t = function ( value, mode ) {
+						/******/
+						if ( mode & 1 ) value = __webpack_require__( value );
+						/******/
+						if ( mode & 8 ) return value;
+						/******/
+						if ( ( mode & 4 ) && typeof value === 'object' && value && value.__esModule ) return value;
+						/******/
+						var ns = Object.create( null );
+						/******/
+						__webpack_require__.r( ns );
+						/******/
+						Object.defineProperty( ns, 'default', { enumerable : true, value : value } );
+						/******/
+						if ( mode & 2 && typeof value != 'string' ) for ( var key in value ) __webpack_require__.d( ns, key, function ( key ) {
+							return value[ key ];
+						}.bind( null, key ) );
+						/******/
+						return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -4682,14 +4696,14 @@ ResponsiveToggle.defaults = {
 					/************************************************************************/
 					/******/ ( {
 
-/***/ "./foundation.core":
-/*!****************************************************************************************************************************************************************!*\
-  !*** external {"root":["__FOUNDATION_EXTERNAL__","foundation.core"],"amd":"./foundation.core","commonjs":"./foundation.core","commonjs2":"./foundation.core"} ***!
-  \****************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+						/***/ "./foundation.core" :
+						/*!****************************************************************************************************************************************************************!*\
+						 !*** external {"root":["__FOUNDATION_EXTERNAL__","foundation.core"],"amd":"./foundation.core","commonjs":"./foundation.core","commonjs2":"./foundation.core"} ***!
+						 \****************************************************************************************************************************************************************/
+						/*! no static exports found */
+						/***/ ( function ( module, exports ) {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE__foundation_core__;
+							module.exports = __WEBPACK_EXTERNAL_MODULE__foundation_core__;
 
 /***/ }),
 
