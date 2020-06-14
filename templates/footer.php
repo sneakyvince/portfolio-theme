@@ -9,7 +9,7 @@
 
 		<div class="footer__bottom">
 			<div class="footer__copyright">
-				<b>&copy;<?= date( ' Y ' ) ?><?= get_bloginfo( 'name' ) ?></b>
+				<b>©️<?= date( ' Y ' ) ?><?= get_bloginfo( 'name' ) ?></b>
 
 				<?php if ( has_nav_menu( 'footer_navigation' ) ) : ?>
 					<?php wp_nav_menu( [
@@ -22,6 +22,7 @@
 
 			<div class="footer__back-to-top" data-smooth-scroll>
 				<a href="#top-anchor"><?= esc_attr_x( 'Terug naar boven', 'Footer', 'indicia-theme' ) ?></a>
+				☝️
 			</div><!-- /.footer__scroll-top -->
 		</div><!-- /.footer__bottom -->
 	</div>

@@ -1,8 +1,7 @@
 <?php use IndiciaInteractiv\Theme\Titles; ?>
 
-<header id="content-header" class="single-header">
+<header class="single-header">
 	<div class="grid-container">
-
 		<div class="grid-x">
 			<div class="cell small-12 medium-6 large-12">
 				<?php get_template_part( 'templates/entry-meta' ); ?>

@@ -1,7 +1,7 @@
 import gsap from 'gsap'
 
 const header = document.getElementById( 'site-header' );
-const contentHeader = document.getElementById( 'content-header' );
+const contentStart = document.getElementById( 'content-start' );
 const wrapContainer = document.getElementById( 'wrap-container' );
 wrapContainer.style.marginTop = header.offsetHeight + 'px';
 
@@ -41,28 +41,33 @@ function hasScrolled() {
 	let currentScrollPos = window.pageYOffset;
 
 	// Make sure they scroll more than delta
-	if ( Math.abs( prevScrollPos - currentScrollPos ) <= scrollThreshold ) return;
+	if ( Math.abs( prevScrollPos - currentScrollPos ) <= scrollThreshold ) {
+		return
+	}
 
-	// When the user is just about to scroll past the header
-	if ( currentScrollPos >= contentHeader.offsetHeight - header.offsetHeight ) {
+	// When the user is just about to scroll to the content start
+	if ( currentScrollPos >= contentStart.offsetTop - header.offsetHeight ) {
 		header.classList.add( 'header--surface' )
 	}
 	// When the user scrolled back to the top
-	else if ( currentScrollPos <= 20 ) {
+	else if ( currentScrollPos <= 30 ) {
 		header.classList.remove( 'header--surface' );
 		stickied = false;
 	}
 
 	// Just for efficiency's sake
-	if ( hover ) return;
+	if ( hover ) {
+		return
+	}
 
 	// If user hasn't scrolled past header and the navbar is not stickied
-	if ( ( currentScrollPos <= contentHeader.offsetHeight ) && ! stickied ) {
-		opacity = Math.max( 0, 1 - scrollY / 70 );
+	if ( ( currentScrollPos <= contentStart.offsetTop ) && ! stickied ) {
+		// console.log( header.offsetHeight )
+		opacity = Math.max( 0, 1 - currentScrollPos / 30 );
 		stickied = false;
 	}
 
-	// If user scrolled past header
+	// If user scrolled past content start
 	else {
 		stickied = true;
 

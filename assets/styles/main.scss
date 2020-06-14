@@ -23,8 +23,10 @@
 @import 'components/inputs';
 @import 'components/forms';
 @import 'components/searchform';
+@import 'components/search-bar';
 @import 'components/grid';
 @import 'components/content';
+@import 'components/entry-meta';
 @import 'components/definition';
 @import 'components/wp-classes';
 @import 'components/posts_navigation';
@@ -37,7 +39,7 @@
 
 //Layouts
 @import 'layouts/header';
-@import 'layouts/content-header';
+@import 'layouts/single-header';
 @import 'layouts/page-header';
 @import 'layouts/sidebar';
 @import 'layouts/comments';

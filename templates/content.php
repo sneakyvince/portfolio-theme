@@ -25,9 +25,9 @@ $thumb    = get_the_post_thumbnail();
 			<time class="updated" datetime="<?= get_post_time( 'c', true ); ?>"><?= get_the_date( 'j F' ); ?></time>
 
 			<?php if ( $title ) : ?>
-				<h3 class="article__title">
+				<h4 class="article__title">
 					<?= $title; ?>
-				</h3>
+				</h4>
 			<?php endif; ?>
 
 			<?php if ( $excerpt ) : ?>

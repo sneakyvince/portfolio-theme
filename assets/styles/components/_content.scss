@@ -6,29 +6,43 @@
 }
 
 .article {
+	position       : relative;
 	display        : flex;
 	flex-direction : column;
 	flex-grow      : 1;
 	height         : 100%;
-	padding        : rem-calc(15px);
-	border-radius  : rem-calc(25px);
+	//padding        : rem-calc(15px);
+	//border-radius  : rem-calc(25px);
 	min-height     : rem-calc(600px);
 	@include transition;
 
-	&:hover {
-
-		.article__read-more {
-			background : $primary-color;
-			color      : $white;
-		}
+	&::after {
+		content       : '';
+		position      : absolute;
+		left          : rem-calc(-15px);
+		right         : rem-calc(-15px);
+		top           : rem-calc(-15px);
+		bottom        : rem-calc(-15px);
+		border-radius : rem-calc(25px);
+		border        : rem-calc(2px) solid transparent;
+		transition    : border 150ms ease-out;
 	}
 
 	&__link {
 		@extend .link--reset;
 
 		@include hocus {
-			.article {
-				background : $surface-background;
+			.article::after {
+				//background : $surface-background;
+				border-color : $grey-1;
+			}
+
+			.article__read-more {
+				background : $button-background-hover;
+
+				&::after {
+					content : '👉 '
+				}
 			}
 		}
 	}
@@ -58,16 +72,15 @@
 
 	&__category {
 		display       : inline-block;
-		border        : 1px solid $main-border-color;
-		padding       : rem-calc(5px 10px);
+		padding       : rem-calc(7px 12px);
+		background    : $surface-background;
 		border-radius : rem-calc(10px);
 		margin-bottom : rem-calc(10px);
 		margin-right  : rem-calc(10px);
 	}
 
 	&__title {
-		//@extend h5;
-		font-size : rem-calc(25px);
+		line-height : rem-calc(30px);
 	}
 
 	&__footer {
@@ -75,11 +88,14 @@
 
 	&__read-more {
 		display       : inline-block;
-		color         : $black;
-		background    : $surface-background;
+		background    : $primary-color;
 		margin-top    : rem-calc(30px);
-		padding       : rem-calc(5px 10px);
+		padding       : rem-calc(7px 12px);
 		border-radius : rem-calc(10px);
 		transition    : all 150ms ease-out;
+
+		&::after {
+			content : '';
+		}
 	}
 }

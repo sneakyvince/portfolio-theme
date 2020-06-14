@@ -41,11 +41,12 @@ use IndiciaInteractiv\Theme\Assets;
 						] ); ?>
 					<?php endif; ?>
 				</ul>
-
-				<?php
-				get_search_form();
-				?>
 			</nav><!-- /top-bar-right -->
+
+			<nav class="top-bar-search">
+				<?php get_template_part( 'templates/search-bar' ); ?>
+			</nav>
+			<!-- /.top-bar-search -->
 		</div><!-- /top-bar -->
 	</div><!-- /grid-container -->
 </header><!-- /header -->

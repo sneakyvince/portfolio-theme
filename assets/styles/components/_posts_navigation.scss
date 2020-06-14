@@ -36,12 +36,13 @@
 	}
 
 	.nav-next a, .nav-previous a {
-		@extend .link--reset;
+		//@extend .link--reset;
 		@extend .button;
-		@extend .secondary;
-		@extend .hollow;
+		//@extend .hollow;
 
-		display     : flex;
-		align-items : center;
+		display         : flex;
+		align-items     : center;
+		text-decoration : none;
+		color           : $white;
 	}
 }

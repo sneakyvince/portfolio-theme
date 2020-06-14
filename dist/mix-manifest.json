@@ -32,5 +32,8 @@
 	"/fonts/JetBrainsMono-Regular.svg": "/fonts/JetBrainsMono-Regular.svg",
 	"/fonts/JetBrainsMono-Regular.ttf": "/fonts/JetBrainsMono-Regular.ttf",
 	"/fonts/JetBrainsMono-Regular.woff": "/fonts/JetBrainsMono-Regular.woff",
-	"/fonts/JetBrainsMono-Regular.woff2": "/fonts/JetBrainsMono-Regular.woff2"
+	"/fonts/JetBrainsMono-Regular.woff2": "/fonts/JetBrainsMono-Regular.woff2",
+	"/icons/search-outline.svg": "/icons/search-outline.svg",
+	"/fonts/Inter-SemiBold.woff": "/fonts/Inter-SemiBold.woff",
+	"/fonts/Inter-SemiBold.woff2": "/fonts/Inter-SemiBold.woff2"
 }

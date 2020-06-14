@@ -71,7 +71,8 @@
 			line-height   : rem-calc(20px);
 		}
 
-		li.current-menu-item a:before {
+		&.is-dropdown-submenu-parent > li.current-menu-item > a:before,
+		&.is-dropdown-submenu.first-sub > li.current-menu-item > a:before {
 			content : '👉 '
 		}
 	}

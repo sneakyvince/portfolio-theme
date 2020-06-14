@@ -9,8 +9,8 @@
 						<?php the_content(); ?>
 					</div>
 
-					<div class="entry-content cell small-12 large-3" data-sticky-container>
-						<div class="sticky" id="sticky" data-sticky data-margin-top="6.25" data-anchor="entry-content">
+					<div class="cell small-12 large-3" data-sticky-container>
+						<div class="sticky" id="sticky" data-sticky data-margin-top="4" data-anchor="entry-content">
 							<?php get_template_part( 'templates/content', 'magellan' ); ?>
 						</div>
 					</div>

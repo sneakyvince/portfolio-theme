@@ -23,16 +23,17 @@ use IndiciaInteractiv\Theme\Wrapper;
 	get_template_part( 'templates/header' );
 	?>
 	<div class="wrap-container" id="wrap-container" role="document">
-		<main class="main">
+		<main id="main" class="main">
+			<div id="content-start"></div>
 			<?php include Wrapper\template_path(); ?>
-		</main><!-- /.main -->
+		</main>
 
 		<?php if ( Setup\display_sidebar() ) : ?>
 			<aside class="sidebar">
 				<?php include Wrapper\sidebar_path(); ?>
-			</aside><!-- /.sidebar -->
+			</aside>
 		<?php endif; ?>
-	</div><!-- /.wrap -->
+	</div>
 	<?php
 	do_action( 'get_footer' );
 	get_template_part( 'templates/footer' );

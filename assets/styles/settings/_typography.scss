@@ -26,26 +26,26 @@ $header-margin-bottom         : 0.6rem;
 $header-font-weight           : $global-weight-semi-bold;
 $header-styles                : (
 	'small': (
-		'h1': ('fs': 48, 'lh': 56, 'mt': 0, 'mb': 24),
-		'h2': ('fs': 52, 'lh': 60, 'mt': 0, 'mb': $header-margin-bottom),
-		'h3': ('fs': 44, 'lh': 52, 'mt': 0, 'mb': $header-margin-bottom),
-		'h4': ('fs': 34, 'lh': 42, 'mt': 0, 'mb': $header-margin-bottom),
-		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 24),
-		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 24)
+		'h1': ('fs': 56, 'lh': 64, 'mt': 0, 'mb': 16),
+		'h2': ('fs': 40, 'lh': 48, 'mt': 0, 'mb': 16),
+		'h3': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 16),
+		'h4': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 16),
+		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 16),
+		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 16)
 	),
 	'medium': (
-		'h1': ('fs': 60, 'lh': 68, 'mt': 0, 'mb': 24),
-		'h2': ('fs': 44, 'lh': 62, 'mt': 0, 'mb': 24),
-		'h3': ('fs': 32, 'lh': 40, 'mt': 0, 'mb': $header-margin-bottom),
-		'h4': ('fs': 36, 'lh': 44, 'mt': 0, 'mb': $header-margin-bottom),
-		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 24),
-		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 24)
+		'h1': ('fs': 64, 'lh': 72, 'mt': 0, 'mb': 20),
+		'h2': ('fs': 48, 'lh': 56, 'mt': 0, 'mb': 20),
+		'h3': ('fs': 28, 'lh': 36, 'mt': 0, 'mb': 20),
+		'h4': ('fs': 24, 'lh': 32, 'mt': 0, 'mb': 20),
+		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 20),
+		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 20)
 	),
 	'large': (
 		'h1': ('fs': 72, 'lh': 80, 'mt': 0, 'mb': 24),
-		'h2': ('fs': 72, 'lh': 80, 'mt': 0, 'mb': 24),
-		'h3': ('fs': 48, 'lh': 54, 'mt': 0, 'mb': 24),
-		'h4': ('fs': 36, 'lh': 42, 'mt': 0, 'mb': 24),
+		'h2': ('fs': 56, 'lh': 62, 'mt': 0, 'mb': 24),
+		'h3': ('fs': 36, 'lh': 42, 'mt': 0, 'mb': 24),
+		'h4': ('fs': 24, 'lh': 32, 'mt': 0, 'mb': 24),
 		'h5': ('fs': 22, 'lh': 30, 'mt': 0, 'mb': 24),
 		'h6': ('fs': 18, 'lh': 26, 'mt': 0, 'mb': 24)
 	),
