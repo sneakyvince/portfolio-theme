@@ -1,10 +1,12 @@
 .entry-meta {
-	display       : flex;
-	align-items   : center;
-	margin-bottom : rem-calc(15px);
+	display     : flex;
+	flex-wrap   : wrap;
+	align-items : center;
 
 	> * {
-		margin-right : rem-calc(15px);
+		display       : inline-block;
+		margin-right  : rem-calc(15px);
+		margin-bottom : rem-calc(15px);
 
 		&:last-child {
 			margin-right : 0;
@@ -15,7 +17,6 @@
 		background    : $surface-background;
 		padding       : rem-calc(10px 15px);
 		border-radius : rem-calc(7px);
-
 	}
 
 	&__category {
@@ -34,6 +35,7 @@
 	&__tags {
 		a {
 			@extend .link--reset;
+			display       : inline-block;
 			background    : $surface-background;
 			padding       : rem-calc(10px 15px);
 			border-radius : rem-calc(7px);

@@ -1,7 +1,13 @@
-<?php get_template_part( 'templates/single', 'header' ); ?>
+<?php
+/*
+* Template Name: Reading Guide Template
+*/
+?>
+
+<?php get_template_part( 'templates/page-reading-guide', 'header' ); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<section class="section-wrap--content">
+	<section id="reading-guide-post" class="section-wrap--content">
 		<article <?php post_class(); ?>>
 			<div class="grid-container">
 				<div class="grid-x grid-margin-x">

@@ -186,3 +186,12 @@ function filter__remove_protected_text() {
 }
 
 add_filter( 'protected_title_format', __NAMESPACE__ . '\\filter__remove_protected_text' );
+
+function filter__robots_txt( $output, $public ) {
+	echo "User-agent: * \r\n";
+	echo "Disallow: /";
+
+	return;
+}
+
+add_filter( 'robots_txt', __NAMESPACE__ . '\\filter__robots_txt', 10, 2 );

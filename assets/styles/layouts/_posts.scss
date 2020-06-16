@@ -18,16 +18,18 @@
 //}
 
 .entry-content {
-	padding-right : 100px;
+
+	@include breakpoint(large up) {
+		padding-right : 100px;
+	}
 
 	p {
-		font-size : rem-calc(18px);
+		font-size     : rem-calc(18px);
+		margin-bottom : rem-calc(28.8px);
 	}
 
 
 	.protected-post-form {
-
-
 		&__inputs {
 			display : flex;
 		}
